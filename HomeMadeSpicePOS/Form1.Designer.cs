@@ -700,7 +700,7 @@
             this.panelCurrentOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.panelCurrentOrder.Controls.Add(this.label9);
             this.panelCurrentOrder.Controls.Add(this.label8);
-            this.panelCurrentOrder.Location = new System.Drawing.Point(953, 243);
+            this.panelCurrentOrder.Location = new System.Drawing.Point(1030, 243);
             this.panelCurrentOrder.Name = "panelCurrentOrder";
             this.panelCurrentOrder.Size = new System.Drawing.Size(811, 300);
             this.panelCurrentOrder.TabIndex = 12;
@@ -738,7 +738,7 @@
             this.TotalsPanel.Controls.Add(this.label12);
             this.TotalsPanel.Controls.Add(this.label11);
             this.TotalsPanel.Controls.Add(this.label10);
-            this.TotalsPanel.Location = new System.Drawing.Point(953, 590);
+            this.TotalsPanel.Location = new System.Drawing.Point(1030, 590);
             this.TotalsPanel.Name = "TotalsPanel";
             this.TotalsPanel.Size = new System.Drawing.Size(811, 252);
             this.TotalsPanel.TabIndex = 13;
@@ -815,7 +815,7 @@
             this.btnCancelOrder.FillColor = System.Drawing.Color.LightCoral;
             this.btnCancelOrder.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelOrder.ForeColor = System.Drawing.Color.White;
-            this.btnCancelOrder.Location = new System.Drawing.Point(1002, 863);
+            this.btnCancelOrder.Location = new System.Drawing.Point(1079, 863);
             this.btnCancelOrder.Name = "btnCancelOrder";
             this.btnCancelOrder.Size = new System.Drawing.Size(342, 45);
             this.btnCancelOrder.TabIndex = 14;
@@ -833,7 +833,7 @@
             this.btnCheckOut.FillColor = System.Drawing.Color.LimeGreen;
             this.btnCheckOut.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckOut.ForeColor = System.Drawing.Color.White;
-            this.btnCheckOut.Location = new System.Drawing.Point(1386, 863);
+            this.btnCheckOut.Location = new System.Drawing.Point(1463, 863);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(342, 45);
             this.btnCheckOut.TabIndex = 15;
@@ -850,7 +850,7 @@
             this.colQty,
             this.colTime,
             this.colTotal});
-            this.dataGridView1.Location = new System.Drawing.Point(953, 946);
+            this.dataGridView1.Location = new System.Drawing.Point(1030, 946);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(811, 190);
             this.dataGridView1.TabIndex = 16;
@@ -894,7 +894,7 @@
             this.guna2GradientPanel5.Controls.Add(this.label13);
             this.guna2GradientPanel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.guna2GradientPanel5.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.guna2GradientPanel5.Location = new System.Drawing.Point(1012, 1172);
+            this.guna2GradientPanel5.Location = new System.Drawing.Point(1035, 1168);
             this.guna2GradientPanel5.Name = "guna2GradientPanel5";
             this.guna2GradientPanel5.ShadowDecoration.BorderRadius = 30;
             this.guna2GradientPanel5.ShadowDecoration.Depth = 5;
@@ -933,7 +933,7 @@
             this.guna2GradientPanel6.Controls.Add(this.label14);
             this.guna2GradientPanel6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.guna2GradientPanel6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.guna2GradientPanel6.Location = new System.Drawing.Point(1470, 1172);
+            this.guna2GradientPanel6.Location = new System.Drawing.Point(1493, 1168);
             this.guna2GradientPanel6.Name = "guna2GradientPanel6";
             this.guna2GradientPanel6.ShadowDecoration.BorderRadius = 30;
             this.guna2GradientPanel6.ShadowDecoration.Depth = 5;
@@ -970,7 +970,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.ClientSize = new System.Drawing.Size(1941, 1061);
+            this.ClientSize = new System.Drawing.Size(1924, 1061);
             this.Controls.Add(this.guna2GradientPanel6);
             this.Controls.Add(this.guna2GradientPanel5);
             this.Controls.Add(this.dataGridView1);
