@@ -39,9 +39,9 @@ namespace HomeMadeSpicePOS
             public decimal Total => Qty * Price;
         }
 
-        private void btnEspresso_Click(object sender, EventArgs e)
+        private void btnEspresso_Click(object sender, EventArgs e)//cappucino
         {
-            AddToCart("Espresso", 10m);
+            AddToCart("Cappucino", 10m);
         }
         private void AddToCart(string name, decimal price)
         {
@@ -145,10 +145,11 @@ namespace HomeMadeSpicePOS
             RefreshOrderPanel();
         }
 
-        private void guna2Button14_Click(object sender, EventArgs e)
+        private void guna2Button14_Click(object sender, EventArgs e)//Caramel
         {
             AddToCart("Caramel", 20m);
         }
+
     }
 
 }
