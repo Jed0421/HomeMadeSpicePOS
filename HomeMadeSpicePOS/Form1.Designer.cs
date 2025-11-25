@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnChikenPesto = new Guna.UI2.WinForms.Guna2Button();
             this.btnCarbonaraBacon = new Guna.UI2.WinForms.Guna2Button();
             this.btnSaltedEgg = new Guna.UI2.WinForms.Guna2Button();
@@ -83,28 +82,11 @@
             this.colTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lblTotalSalesDashboard = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label16 = new System.Windows.Forms.Label();
+            this.lblBestSellingDashboard = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
@@ -120,9 +102,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::HomeMadeSpicePOS.Properties.Resources._1000017382;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(17, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(127, 119);
+            this.pictureBox1.Size = new System.Drawing.Size(169, 146);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -132,22 +115,17 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(137, 31);
+            this.label1.Location = new System.Drawing.Point(183, 38);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(543, 65);
+            this.label1.Size = new System.Drawing.Size(679, 81);
             this.label1.TabIndex = 1;
             this.label1.Text = "Home Made Spice POS";
             // 
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientPanel1.Controls.Add(this.label21);
-            this.guna2GradientPanel1.Controls.Add(this.label20);
-            this.guna2GradientPanel1.Controls.Add(this.label19);
-            this.guna2GradientPanel1.Controls.Add(this.label18);
-            this.guna2GradientPanel1.Controls.Add(this.label17);
             this.guna2GradientPanel1.Controls.Add(this.label4);
-            this.guna2GradientPanel1.Controls.Add(this.label3);
             this.guna2GradientPanel1.Controls.Add(this.btnChikenPesto);
             this.guna2GradientPanel1.Controls.Add(this.btnCarbonaraBacon);
             this.guna2GradientPanel1.Controls.Add(this.btnSaltedEgg);
@@ -156,9 +134,13 @@
             this.guna2GradientPanel1.Controls.Add(this.btnTuna);
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(88, 243);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(117, 299);
+            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(844, 452);
+            this.guna2GradientPanel1.ShadowDecoration.Depth = 5;
+            this.guna2GradientPanel1.ShadowDecoration.Enabled = true;
+            this.guna2GradientPanel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1125, 556);
             this.guna2GradientPanel1.TabIndex = 2;
             // 
             // label4
@@ -166,23 +148,13 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(17, 18);
+            this.label4.Location = new System.Drawing.Point(23, 22);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label4.Size = new System.Drawing.Size(230, 40);
+            this.label4.Size = new System.Drawing.Size(290, 50);
             this.label4.TabIndex = 8;
             this.label4.Text = "Pasta Merienda";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(115, 180);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 23);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "60.00";
             // 
             // btnChikenPesto
             // 
@@ -194,15 +166,16 @@
             this.btnChikenPesto.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnChikenPesto.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnChikenPesto.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnChikenPesto.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChikenPesto.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChikenPesto.ForeColor = System.Drawing.Color.White;
-            this.btnChikenPesto.Location = new System.Drawing.Point(602, 256);
+            this.btnChikenPesto.Location = new System.Drawing.Point(803, 315);
+            this.btnChikenPesto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnChikenPesto.Name = "btnChikenPesto";
             this.btnChikenPesto.ShadowDecoration.BorderRadius = 30;
             this.btnChikenPesto.ShadowDecoration.Depth = 5;
             this.btnChikenPesto.ShadowDecoration.Enabled = true;
             this.btnChikenPesto.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
-            this.btnChikenPesto.Size = new System.Drawing.Size(180, 157);
+            this.btnChikenPesto.Size = new System.Drawing.Size(240, 193);
             this.btnChikenPesto.TabIndex = 6;
             this.btnChikenPesto.Text = "Chicken Penne Pesto";
             this.btnChikenPesto.Click += new System.EventHandler(this.btnChikenPesto_Click);
@@ -217,15 +190,16 @@
             this.btnCarbonaraBacon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCarbonaraBacon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCarbonaraBacon.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnCarbonaraBacon.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCarbonaraBacon.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCarbonaraBacon.ForeColor = System.Drawing.Color.White;
-            this.btnCarbonaraBacon.Location = new System.Drawing.Point(337, 256);
+            this.btnCarbonaraBacon.Location = new System.Drawing.Point(449, 315);
+            this.btnCarbonaraBacon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCarbonaraBacon.Name = "btnCarbonaraBacon";
             this.btnCarbonaraBacon.ShadowDecoration.BorderRadius = 30;
             this.btnCarbonaraBacon.ShadowDecoration.Depth = 5;
             this.btnCarbonaraBacon.ShadowDecoration.Enabled = true;
             this.btnCarbonaraBacon.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
-            this.btnCarbonaraBacon.Size = new System.Drawing.Size(180, 157);
+            this.btnCarbonaraBacon.Size = new System.Drawing.Size(240, 193);
             this.btnCarbonaraBacon.TabIndex = 5;
             this.btnCarbonaraBacon.Text = "Carbonara w/ Bacon Bits";
             this.btnCarbonaraBacon.Click += new System.EventHandler(this.btnCarbonaraBacon_Click);
@@ -240,15 +214,16 @@
             this.btnSaltedEgg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSaltedEgg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnSaltedEgg.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnSaltedEgg.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaltedEgg.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaltedEgg.ForeColor = System.Drawing.Color.White;
-            this.btnSaltedEgg.Location = new System.Drawing.Point(337, 82);
+            this.btnSaltedEgg.Location = new System.Drawing.Point(449, 101);
+            this.btnSaltedEgg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSaltedEgg.Name = "btnSaltedEgg";
             this.btnSaltedEgg.ShadowDecoration.BorderRadius = 30;
             this.btnSaltedEgg.ShadowDecoration.Depth = 5;
             this.btnSaltedEgg.ShadowDecoration.Enabled = true;
             this.btnSaltedEgg.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
-            this.btnSaltedEgg.Size = new System.Drawing.Size(180, 157);
+            this.btnSaltedEgg.Size = new System.Drawing.Size(240, 193);
             this.btnSaltedEgg.TabIndex = 4;
             this.btnSaltedEgg.Text = "Salted Egg Pasta";
             this.btnSaltedEgg.Click += new System.EventHandler(this.btnSaltedEgg_Click);
@@ -263,15 +238,16 @@
             this.btnBakedMac.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnBakedMac.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBakedMac.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnBakedMac.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBakedMac.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBakedMac.ForeColor = System.Drawing.Color.White;
-            this.btnBakedMac.Location = new System.Drawing.Point(605, 82);
+            this.btnBakedMac.Location = new System.Drawing.Point(807, 101);
+            this.btnBakedMac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBakedMac.Name = "btnBakedMac";
             this.btnBakedMac.ShadowDecoration.BorderRadius = 30;
             this.btnBakedMac.ShadowDecoration.Depth = 5;
             this.btnBakedMac.ShadowDecoration.Enabled = true;
             this.btnBakedMac.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
-            this.btnBakedMac.Size = new System.Drawing.Size(180, 157);
+            this.btnBakedMac.Size = new System.Drawing.Size(240, 193);
             this.btnBakedMac.TabIndex = 3;
             this.btnBakedMac.Text = "Baked Mac";
             this.btnBakedMac.Click += new System.EventHandler(this.btnBakedMac_Click);
@@ -286,15 +262,16 @@
             this.btnChkenMushroom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnChkenMushroom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnChkenMushroom.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnChkenMushroom.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChkenMushroom.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChkenMushroom.ForeColor = System.Drawing.Color.White;
-            this.btnChkenMushroom.Location = new System.Drawing.Point(57, 256);
+            this.btnChkenMushroom.Location = new System.Drawing.Point(76, 315);
+            this.btnChkenMushroom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnChkenMushroom.Name = "btnChkenMushroom";
             this.btnChkenMushroom.ShadowDecoration.BorderRadius = 30;
             this.btnChkenMushroom.ShadowDecoration.Depth = 5;
             this.btnChkenMushroom.ShadowDecoration.Enabled = true;
             this.btnChkenMushroom.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
-            this.btnChkenMushroom.Size = new System.Drawing.Size(180, 157);
+            this.btnChkenMushroom.Size = new System.Drawing.Size(240, 193);
             this.btnChkenMushroom.TabIndex = 2;
             this.btnChkenMushroom.Text = "Chicken & Mushroom Alfredo";
             this.btnChkenMushroom.Click += new System.EventHandler(this.btnChkenMushroom_Click);
@@ -309,27 +286,22 @@
             this.btnTuna.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnTuna.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnTuna.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnTuna.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTuna.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTuna.ForeColor = System.Drawing.Color.White;
-            this.btnTuna.Location = new System.Drawing.Point(60, 82);
+            this.btnTuna.Location = new System.Drawing.Point(80, 101);
+            this.btnTuna.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTuna.Name = "btnTuna";
             this.btnTuna.ShadowDecoration.BorderRadius = 30;
             this.btnTuna.ShadowDecoration.Depth = 5;
             this.btnTuna.ShadowDecoration.Enabled = true;
             this.btnTuna.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
-            this.btnTuna.Size = new System.Drawing.Size(180, 157);
+            this.btnTuna.Size = new System.Drawing.Size(240, 193);
             this.btnTuna.TabIndex = 1;
             this.btnTuna.Text = "Tuna Pasta ";
             this.btnTuna.Click += new System.EventHandler(this.btnTuna_Click);
             // 
             // guna2GradientPanel2
             // 
-            this.guna2GradientPanel2.Controls.Add(this.label27);
-            this.guna2GradientPanel2.Controls.Add(this.label26);
-            this.guna2GradientPanel2.Controls.Add(this.label25);
-            this.guna2GradientPanel2.Controls.Add(this.label24);
-            this.guna2GradientPanel2.Controls.Add(this.label22);
-            this.guna2GradientPanel2.Controls.Add(this.label23);
             this.guna2GradientPanel2.Controls.Add(this.label5);
             this.guna2GradientPanel2.Controls.Add(this.btnCookiesCream);
             this.guna2GradientPanel2.Controls.Add(this.btnJavachip);
@@ -339,9 +311,13 @@
             this.guna2GradientPanel2.Controls.Add(this.btnOreo);
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.guna2GradientPanel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(88, 730);
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(117, 898);
+            this.guna2GradientPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(844, 491);
+            this.guna2GradientPanel2.ShadowDecoration.Depth = 7;
+            this.guna2GradientPanel2.ShadowDecoration.Enabled = true;
+            this.guna2GradientPanel2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(1125, 604);
             this.guna2GradientPanel2.TabIndex = 6;
             // 
             // label5
@@ -349,10 +325,11 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(24, 27);
+            this.label5.Location = new System.Drawing.Point(32, 33);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label5.Size = new System.Drawing.Size(112, 40);
+            this.label5.Size = new System.Drawing.Size(142, 50);
             this.label5.TabIndex = 9;
             this.label5.Text = "Frappe";
             // 
@@ -365,11 +342,16 @@
             this.btnCookiesCream.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCookiesCream.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCookiesCream.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnCookiesCream.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCookiesCream.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCookiesCream.ForeColor = System.Drawing.Color.White;
-            this.btnCookiesCream.Location = new System.Drawing.Point(605, 280);
+            this.btnCookiesCream.Location = new System.Drawing.Point(807, 345);
+            this.btnCookiesCream.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCookiesCream.Name = "btnCookiesCream";
-            this.btnCookiesCream.Size = new System.Drawing.Size(180, 157);
+            this.btnCookiesCream.ShadowDecoration.BorderRadius = 30;
+            this.btnCookiesCream.ShadowDecoration.Depth = 5;
+            this.btnCookiesCream.ShadowDecoration.Enabled = true;
+            this.btnCookiesCream.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
+            this.btnCookiesCream.Size = new System.Drawing.Size(240, 193);
             this.btnCookiesCream.TabIndex = 7;
             this.btnCookiesCream.Text = "Cookies n Cream";
             this.btnCookiesCream.Click += new System.EventHandler(this.btnCookiesCream_Click);
@@ -383,11 +365,16 @@
             this.btnJavachip.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnJavachip.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnJavachip.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnJavachip.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnJavachip.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJavachip.ForeColor = System.Drawing.Color.White;
-            this.btnJavachip.Location = new System.Drawing.Point(337, 98);
+            this.btnJavachip.Location = new System.Drawing.Point(449, 121);
+            this.btnJavachip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnJavachip.Name = "btnJavachip";
-            this.btnJavachip.Size = new System.Drawing.Size(180, 157);
+            this.btnJavachip.ShadowDecoration.BorderRadius = 30;
+            this.btnJavachip.ShadowDecoration.Depth = 5;
+            this.btnJavachip.ShadowDecoration.Enabled = true;
+            this.btnJavachip.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
+            this.btnJavachip.Size = new System.Drawing.Size(240, 193);
             this.btnJavachip.TabIndex = 6;
             this.btnJavachip.Text = "Java Chip";
             this.btnJavachip.Click += new System.EventHandler(this.btnJavachip_Click);
@@ -401,11 +388,16 @@
             this.btnDarkChocolate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnDarkChocolate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnDarkChocolate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnDarkChocolate.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDarkChocolate.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDarkChocolate.ForeColor = System.Drawing.Color.White;
-            this.btnDarkChocolate.Location = new System.Drawing.Point(605, 98);
+            this.btnDarkChocolate.Location = new System.Drawing.Point(807, 121);
+            this.btnDarkChocolate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDarkChocolate.Name = "btnDarkChocolate";
-            this.btnDarkChocolate.Size = new System.Drawing.Size(180, 157);
+            this.btnDarkChocolate.ShadowDecoration.BorderRadius = 30;
+            this.btnDarkChocolate.ShadowDecoration.Depth = 5;
+            this.btnDarkChocolate.ShadowDecoration.Enabled = true;
+            this.btnDarkChocolate.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
+            this.btnDarkChocolate.Size = new System.Drawing.Size(240, 193);
             this.btnDarkChocolate.TabIndex = 5;
             this.btnDarkChocolate.Text = "Dark Chocolate";
             this.btnDarkChocolate.Click += new System.EventHandler(this.btnDarkChocolate_Click);
@@ -419,11 +411,16 @@
             this.btnStrawberry.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnStrawberry.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnStrawberry.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnStrawberry.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStrawberry.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStrawberry.ForeColor = System.Drawing.Color.White;
-            this.btnStrawberry.Location = new System.Drawing.Point(60, 280);
+            this.btnStrawberry.Location = new System.Drawing.Point(80, 345);
+            this.btnStrawberry.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnStrawberry.Name = "btnStrawberry";
-            this.btnStrawberry.Size = new System.Drawing.Size(180, 157);
+            this.btnStrawberry.ShadowDecoration.BorderRadius = 30;
+            this.btnStrawberry.ShadowDecoration.Depth = 5;
+            this.btnStrawberry.ShadowDecoration.Enabled = true;
+            this.btnStrawberry.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
+            this.btnStrawberry.Size = new System.Drawing.Size(240, 193);
             this.btnStrawberry.TabIndex = 4;
             this.btnStrawberry.Text = "Strawberry";
             this.btnStrawberry.Click += new System.EventHandler(this.btnStrawberry_Click);
@@ -437,11 +434,16 @@
             this.btnCoffeeJelly.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCoffeeJelly.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCoffeeJelly.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnCoffeeJelly.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCoffeeJelly.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCoffeeJelly.ForeColor = System.Drawing.Color.White;
-            this.btnCoffeeJelly.Location = new System.Drawing.Point(337, 280);
+            this.btnCoffeeJelly.Location = new System.Drawing.Point(449, 345);
+            this.btnCoffeeJelly.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCoffeeJelly.Name = "btnCoffeeJelly";
-            this.btnCoffeeJelly.Size = new System.Drawing.Size(180, 157);
+            this.btnCoffeeJelly.ShadowDecoration.BorderRadius = 30;
+            this.btnCoffeeJelly.ShadowDecoration.Depth = 5;
+            this.btnCoffeeJelly.ShadowDecoration.Enabled = true;
+            this.btnCoffeeJelly.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
+            this.btnCoffeeJelly.Size = new System.Drawing.Size(240, 193);
             this.btnCoffeeJelly.TabIndex = 3;
             this.btnCoffeeJelly.Text = "Coffee Jelly";
             this.btnCoffeeJelly.Click += new System.EventHandler(this.btnCoffeeJelly_Click);
@@ -455,11 +457,16 @@
             this.btnOreo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnOreo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnOreo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnOreo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOreo.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOreo.ForeColor = System.Drawing.Color.White;
-            this.btnOreo.Location = new System.Drawing.Point(60, 98);
+            this.btnOreo.Location = new System.Drawing.Point(80, 121);
+            this.btnOreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOreo.Name = "btnOreo";
-            this.btnOreo.Size = new System.Drawing.Size(180, 157);
+            this.btnOreo.ShadowDecoration.BorderRadius = 30;
+            this.btnOreo.ShadowDecoration.Depth = 5;
+            this.btnOreo.ShadowDecoration.Enabled = true;
+            this.btnOreo.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
+            this.btnOreo.Size = new System.Drawing.Size(240, 193);
             this.btnOreo.TabIndex = 2;
             this.btnOreo.Text = "Oreo";
             this.btnOreo.Click += new System.EventHandler(this.btnOreo_Click);
@@ -469,20 +476,15 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(103, 165);
+            this.label2.Location = new System.Drawing.Point(137, 203);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(190, 54);
+            this.label2.Size = new System.Drawing.Size(237, 67);
             this.label2.TabIndex = 7;
             this.label2.Text = "Products";
             // 
             // guna2GradientPanel3
             // 
-            this.guna2GradientPanel3.Controls.Add(this.label33);
-            this.guna2GradientPanel3.Controls.Add(this.label32);
-            this.guna2GradientPanel3.Controls.Add(this.label31);
-            this.guna2GradientPanel3.Controls.Add(this.label28);
-            this.guna2GradientPanel3.Controls.Add(this.label29);
-            this.guna2GradientPanel3.Controls.Add(this.label30);
             this.guna2GradientPanel3.Controls.Add(this.label6);
             this.guna2GradientPanel3.Controls.Add(this.btnMocha);
             this.guna2GradientPanel3.Controls.Add(this.btnCaramel);
@@ -492,9 +494,13 @@
             this.guna2GradientPanel3.Controls.Add(this.btnCappucino);
             this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.guna2GradientPanel3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2GradientPanel3.Location = new System.Drawing.Point(88, 1261);
+            this.guna2GradientPanel3.Location = new System.Drawing.Point(117, 1552);
+            this.guna2GradientPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
-            this.guna2GradientPanel3.Size = new System.Drawing.Size(844, 475);
+            this.guna2GradientPanel3.ShadowDecoration.Depth = 5;
+            this.guna2GradientPanel3.ShadowDecoration.Enabled = true;
+            this.guna2GradientPanel3.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
+            this.guna2GradientPanel3.Size = new System.Drawing.Size(1125, 585);
             this.guna2GradientPanel3.TabIndex = 10;
             // 
             // label6
@@ -502,10 +508,11 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(24, 27);
+            this.label6.Location = new System.Drawing.Point(32, 33);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label6.Size = new System.Drawing.Size(157, 40);
+            this.label6.Size = new System.Drawing.Size(201, 50);
             this.label6.TabIndex = 9;
             this.label6.Text = "Cold Brew";
             // 
@@ -518,11 +525,16 @@
             this.btnMocha.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnMocha.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnMocha.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnMocha.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMocha.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMocha.ForeColor = System.Drawing.Color.White;
-            this.btnMocha.Location = new System.Drawing.Point(605, 288);
+            this.btnMocha.Location = new System.Drawing.Point(807, 354);
+            this.btnMocha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMocha.Name = "btnMocha";
-            this.btnMocha.Size = new System.Drawing.Size(180, 157);
+            this.btnMocha.ShadowDecoration.BorderRadius = 30;
+            this.btnMocha.ShadowDecoration.Depth = 5;
+            this.btnMocha.ShadowDecoration.Enabled = true;
+            this.btnMocha.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
+            this.btnMocha.Size = new System.Drawing.Size(240, 193);
             this.btnMocha.TabIndex = 7;
             this.btnMocha.Text = "Mocha";
             this.btnMocha.Click += new System.EventHandler(this.btnMocha_Click);
@@ -536,11 +548,16 @@
             this.btnCaramel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCaramel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCaramel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnCaramel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCaramel.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCaramel.ForeColor = System.Drawing.Color.White;
-            this.btnCaramel.Location = new System.Drawing.Point(337, 98);
+            this.btnCaramel.Location = new System.Drawing.Point(449, 121);
+            this.btnCaramel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCaramel.Name = "btnCaramel";
-            this.btnCaramel.Size = new System.Drawing.Size(180, 157);
+            this.btnCaramel.ShadowDecoration.BorderRadius = 30;
+            this.btnCaramel.ShadowDecoration.Depth = 5;
+            this.btnCaramel.ShadowDecoration.Enabled = true;
+            this.btnCaramel.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
+            this.btnCaramel.Size = new System.Drawing.Size(240, 193);
             this.btnCaramel.TabIndex = 6;
             this.btnCaramel.Text = "Caramel";
             this.btnCaramel.Click += new System.EventHandler(this.guna2Button14_Click);
@@ -554,11 +571,16 @@
             this.btnLatte.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLatte.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLatte.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnLatte.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLatte.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLatte.ForeColor = System.Drawing.Color.White;
-            this.btnLatte.Location = new System.Drawing.Point(605, 98);
+            this.btnLatte.Location = new System.Drawing.Point(807, 121);
+            this.btnLatte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLatte.Name = "btnLatte";
-            this.btnLatte.Size = new System.Drawing.Size(180, 157);
+            this.btnLatte.ShadowDecoration.BorderRadius = 30;
+            this.btnLatte.ShadowDecoration.Depth = 5;
+            this.btnLatte.ShadowDecoration.Enabled = true;
+            this.btnLatte.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
+            this.btnLatte.Size = new System.Drawing.Size(240, 193);
             this.btnLatte.TabIndex = 5;
             this.btnLatte.Text = "Latte";
             this.btnLatte.Click += new System.EventHandler(this.btnLatte_Click);
@@ -572,11 +594,16 @@
             this.btnMacchiato.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnMacchiato.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnMacchiato.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnMacchiato.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMacchiato.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMacchiato.ForeColor = System.Drawing.Color.White;
-            this.btnMacchiato.Location = new System.Drawing.Point(60, 288);
+            this.btnMacchiato.Location = new System.Drawing.Point(80, 354);
+            this.btnMacchiato.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMacchiato.Name = "btnMacchiato";
-            this.btnMacchiato.Size = new System.Drawing.Size(180, 157);
+            this.btnMacchiato.ShadowDecoration.BorderRadius = 30;
+            this.btnMacchiato.ShadowDecoration.Depth = 5;
+            this.btnMacchiato.ShadowDecoration.Enabled = true;
+            this.btnMacchiato.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
+            this.btnMacchiato.Size = new System.Drawing.Size(240, 193);
             this.btnMacchiato.TabIndex = 4;
             this.btnMacchiato.Text = "Macchiato";
             this.btnMacchiato.Click += new System.EventHandler(this.btnMacchiato_Click);
@@ -590,11 +617,16 @@
             this.btnVanila.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnVanila.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnVanila.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnVanila.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVanila.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVanila.ForeColor = System.Drawing.Color.White;
-            this.btnVanila.Location = new System.Drawing.Point(337, 288);
+            this.btnVanila.Location = new System.Drawing.Point(449, 354);
+            this.btnVanila.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnVanila.Name = "btnVanila";
-            this.btnVanila.Size = new System.Drawing.Size(180, 157);
+            this.btnVanila.ShadowDecoration.BorderRadius = 30;
+            this.btnVanila.ShadowDecoration.Depth = 5;
+            this.btnVanila.ShadowDecoration.Enabled = true;
+            this.btnVanila.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
+            this.btnVanila.Size = new System.Drawing.Size(240, 193);
             this.btnVanila.TabIndex = 3;
             this.btnVanila.Text = "Vanilla";
             this.btnVanila.Click += new System.EventHandler(this.btnVanila_Click);
@@ -608,11 +640,16 @@
             this.btnCappucino.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCappucino.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCappucino.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnCappucino.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCappucino.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCappucino.ForeColor = System.Drawing.Color.White;
-            this.btnCappucino.Location = new System.Drawing.Point(60, 98);
+            this.btnCappucino.Location = new System.Drawing.Point(80, 121);
+            this.btnCappucino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCappucino.Name = "btnCappucino";
-            this.btnCappucino.Size = new System.Drawing.Size(180, 157);
+            this.btnCappucino.ShadowDecoration.BorderRadius = 30;
+            this.btnCappucino.ShadowDecoration.Depth = 5;
+            this.btnCappucino.ShadowDecoration.Enabled = true;
+            this.btnCappucino.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
+            this.btnCappucino.Size = new System.Drawing.Size(240, 193);
             this.btnCappucino.TabIndex = 2;
             this.btnCappucino.Text = "Cappucino";
             this.btnCappucino.Click += new System.EventHandler(this.btnEspresso_Click);
@@ -628,9 +665,10 @@
             this.guna2GradientPanel4.Controls.Add(this.guna2Button24);
             this.guna2GradientPanel4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.guna2GradientPanel4.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2GradientPanel4.Location = new System.Drawing.Point(88, 1833);
+            this.guna2GradientPanel4.Location = new System.Drawing.Point(117, 2256);
+            this.guna2GradientPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GradientPanel4.Name = "guna2GradientPanel4";
-            this.guna2GradientPanel4.Size = new System.Drawing.Size(1726, 292);
+            this.guna2GradientPanel4.Size = new System.Drawing.Size(2301, 359);
             this.guna2GradientPanel4.TabIndex = 11;
             // 
             // label7
@@ -638,10 +676,11 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Location = new System.Drawing.Point(24, 27);
+            this.label7.Location = new System.Drawing.Point(32, 33);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label7.Size = new System.Drawing.Size(157, 40);
+            this.label7.Size = new System.Drawing.Size(201, 50);
             this.label7.TabIndex = 9;
             this.label7.Text = "Cold Brew";
             // 
@@ -656,9 +695,10 @@
             this.guna2Button19.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
             this.guna2Button19.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button19.ForeColor = System.Drawing.Color.White;
-            this.guna2Button19.Location = new System.Drawing.Point(1461, 98);
+            this.guna2Button19.Location = new System.Drawing.Point(1948, 121);
+            this.guna2Button19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button19.Name = "guna2Button19";
-            this.guna2Button19.Size = new System.Drawing.Size(180, 157);
+            this.guna2Button19.Size = new System.Drawing.Size(240, 193);
             this.guna2Button19.TabIndex = 7;
             // 
             // guna2Button20
@@ -672,9 +712,10 @@
             this.guna2Button20.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
             this.guna2Button20.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button20.ForeColor = System.Drawing.Color.White;
-            this.guna2Button20.Location = new System.Drawing.Point(337, 98);
+            this.guna2Button20.Location = new System.Drawing.Point(449, 121);
+            this.guna2Button20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button20.Name = "guna2Button20";
-            this.guna2Button20.Size = new System.Drawing.Size(180, 157);
+            this.guna2Button20.Size = new System.Drawing.Size(240, 193);
             this.guna2Button20.TabIndex = 6;
             // 
             // guna2Button21
@@ -688,9 +729,10 @@
             this.guna2Button21.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
             this.guna2Button21.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button21.ForeColor = System.Drawing.Color.White;
-            this.guna2Button21.Location = new System.Drawing.Point(605, 98);
+            this.guna2Button21.Location = new System.Drawing.Point(807, 121);
+            this.guna2Button21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button21.Name = "guna2Button21";
-            this.guna2Button21.Size = new System.Drawing.Size(180, 157);
+            this.guna2Button21.Size = new System.Drawing.Size(240, 193);
             this.guna2Button21.TabIndex = 5;
             // 
             // guna2Button22
@@ -704,9 +746,10 @@
             this.guna2Button22.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
             this.guna2Button22.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button22.ForeColor = System.Drawing.Color.White;
-            this.guna2Button22.Location = new System.Drawing.Point(893, 98);
+            this.guna2Button22.Location = new System.Drawing.Point(1191, 121);
+            this.guna2Button22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button22.Name = "guna2Button22";
-            this.guna2Button22.Size = new System.Drawing.Size(180, 157);
+            this.guna2Button22.Size = new System.Drawing.Size(240, 193);
             this.guna2Button22.TabIndex = 4;
             // 
             // guna2Button23
@@ -720,9 +763,10 @@
             this.guna2Button23.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
             this.guna2Button23.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button23.ForeColor = System.Drawing.Color.White;
-            this.guna2Button23.Location = new System.Drawing.Point(1172, 98);
+            this.guna2Button23.Location = new System.Drawing.Point(1563, 121);
+            this.guna2Button23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button23.Name = "guna2Button23";
-            this.guna2Button23.Size = new System.Drawing.Size(180, 157);
+            this.guna2Button23.Size = new System.Drawing.Size(240, 193);
             this.guna2Button23.TabIndex = 3;
             // 
             // guna2Button24
@@ -736,9 +780,10 @@
             this.guna2Button24.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
             this.guna2Button24.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button24.ForeColor = System.Drawing.Color.White;
-            this.guna2Button24.Location = new System.Drawing.Point(60, 98);
+            this.guna2Button24.Location = new System.Drawing.Point(80, 121);
+            this.guna2Button24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button24.Name = "guna2Button24";
-            this.guna2Button24.Size = new System.Drawing.Size(180, 157);
+            this.guna2Button24.Size = new System.Drawing.Size(240, 193);
             this.guna2Button24.TabIndex = 2;
             // 
             // panelCurrentOrder
@@ -748,9 +793,13 @@
             this.panelCurrentOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.panelCurrentOrder.Controls.Add(this.label9);
             this.panelCurrentOrder.Controls.Add(this.label8);
-            this.panelCurrentOrder.Location = new System.Drawing.Point(1013, 243);
+            this.panelCurrentOrder.Location = new System.Drawing.Point(1275, 299);
+            this.panelCurrentOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelCurrentOrder.Name = "panelCurrentOrder";
-            this.panelCurrentOrder.Size = new System.Drawing.Size(811, 300);
+            this.panelCurrentOrder.ShadowDecoration.Depth = 5;
+            this.panelCurrentOrder.ShadowDecoration.Enabled = true;
+            this.panelCurrentOrder.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
+            this.panelCurrentOrder.Size = new System.Drawing.Size(1081, 369);
             this.panelCurrentOrder.TabIndex = 12;
             // 
             // label9
@@ -758,9 +807,10 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(360, 149);
+            this.label9.Location = new System.Drawing.Point(480, 183);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(109, 21);
+            this.label9.Size = new System.Drawing.Size(136, 28);
             this.label9.TabIndex = 11;
             this.label9.Text = "Cart is empty. ";
             // 
@@ -769,10 +819,11 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.Location = new System.Drawing.Point(24, 17);
+            this.label8.Location = new System.Drawing.Point(32, 21);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label8.Size = new System.Drawing.Size(210, 40);
+            this.label8.Size = new System.Drawing.Size(264, 50);
             this.label8.TabIndex = 10;
             this.label8.Text = "Current Order";
             // 
@@ -786,16 +837,21 @@
             this.TotalsPanel.Controls.Add(this.label12);
             this.TotalsPanel.Controls.Add(this.label11);
             this.TotalsPanel.Controls.Add(this.label10);
-            this.TotalsPanel.Location = new System.Drawing.Point(1013, 590);
+            this.TotalsPanel.Location = new System.Drawing.Point(1275, 713);
+            this.TotalsPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TotalsPanel.Name = "TotalsPanel";
-            this.TotalsPanel.Size = new System.Drawing.Size(811, 252);
+            this.TotalsPanel.ShadowDecoration.Depth = 5;
+            this.TotalsPanel.ShadowDecoration.Enabled = true;
+            this.TotalsPanel.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
+            this.TotalsPanel.Size = new System.Drawing.Size(1081, 310);
             this.TotalsPanel.TabIndex = 13;
             // 
             // txtCash
             // 
-            this.txtCash.Location = new System.Drawing.Point(151, 115);
+            this.txtCash.Location = new System.Drawing.Point(201, 142);
+            this.txtCash.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCash.Name = "txtCash";
-            this.txtCash.Size = new System.Drawing.Size(100, 20);
+            this.txtCash.Size = new System.Drawing.Size(132, 22);
             this.txtCash.TabIndex = 6;
             this.txtCash.TextChanged += new System.EventHandler(this.txtCash_TextChanged);
             // 
@@ -804,9 +860,10 @@
             this.lblChange.AutoSize = true;
             this.lblChange.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChange.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblChange.Location = new System.Drawing.Point(287, 195);
+            this.lblChange.Location = new System.Drawing.Point(383, 240);
+            this.lblChange.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblChange.Name = "lblChange";
-            this.lblChange.Size = new System.Drawing.Size(0, 30);
+            this.lblChange.Size = new System.Drawing.Size(0, 37);
             this.lblChange.TabIndex = 5;
             // 
             // lblTotal
@@ -814,9 +871,10 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTotal.Location = new System.Drawing.Point(146, 37);
+            this.lblTotal.Location = new System.Drawing.Point(195, 46);
+            this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(0, 37);
+            this.lblTotal.Size = new System.Drawing.Size(0, 46);
             this.lblTotal.TabIndex = 3;
             // 
             // label12
@@ -824,9 +882,10 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label12.Location = new System.Drawing.Point(194, 197);
+            this.label12.Location = new System.Drawing.Point(259, 242);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(87, 25);
+            this.label12.Size = new System.Drawing.Size(110, 32);
             this.label12.TabIndex = 2;
             this.label12.Text = "Change :";
             // 
@@ -835,9 +894,10 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label11.Location = new System.Drawing.Point(21, 106);
+            this.label11.Location = new System.Drawing.Point(28, 130);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(90, 37);
+            this.label11.Size = new System.Drawing.Size(111, 46);
             this.label11.TabIndex = 1;
             this.label11.Text = "Cash :";
             // 
@@ -846,15 +906,17 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label10.Location = new System.Drawing.Point(21, 37);
+            this.label10.Location = new System.Drawing.Point(28, 46);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(90, 37);
+            this.label10.Size = new System.Drawing.Size(112, 46);
             this.label10.TabIndex = 0;
             this.label10.Text = "Total :";
             // 
             // btnCancelOrder
             // 
             this.btnCancelOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelOrder.BackColor = System.Drawing.Color.Transparent;
             this.btnCancelOrder.BorderRadius = 10;
             this.btnCancelOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCancelOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -863,9 +925,14 @@
             this.btnCancelOrder.FillColor = System.Drawing.Color.LightCoral;
             this.btnCancelOrder.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelOrder.ForeColor = System.Drawing.Color.White;
-            this.btnCancelOrder.Location = new System.Drawing.Point(1062, 863);
+            this.btnCancelOrder.Location = new System.Drawing.Point(1370, 1065);
+            this.btnCancelOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelOrder.Name = "btnCancelOrder";
-            this.btnCancelOrder.Size = new System.Drawing.Size(342, 45);
+            this.btnCancelOrder.ShadowDecoration.BorderRadius = 20;
+            this.btnCancelOrder.ShadowDecoration.Depth = 5;
+            this.btnCancelOrder.ShadowDecoration.Enabled = true;
+            this.btnCancelOrder.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
+            this.btnCancelOrder.Size = new System.Drawing.Size(456, 55);
             this.btnCancelOrder.TabIndex = 14;
             this.btnCancelOrder.Text = "Cancel Order";
             this.btnCancelOrder.Click += new System.EventHandler(this.btnCancelOrder_Click);
@@ -873,6 +940,7 @@
             // btnCheckOut
             // 
             this.btnCheckOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCheckOut.BackColor = System.Drawing.Color.Transparent;
             this.btnCheckOut.BorderRadius = 10;
             this.btnCheckOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCheckOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -881,9 +949,14 @@
             this.btnCheckOut.FillColor = System.Drawing.Color.LimeGreen;
             this.btnCheckOut.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckOut.ForeColor = System.Drawing.Color.White;
-            this.btnCheckOut.Location = new System.Drawing.Point(1446, 863);
+            this.btnCheckOut.Location = new System.Drawing.Point(1859, 1065);
+            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCheckOut.Name = "btnCheckOut";
-            this.btnCheckOut.Size = new System.Drawing.Size(342, 45);
+            this.btnCheckOut.ShadowDecoration.BorderRadius = 20;
+            this.btnCheckOut.ShadowDecoration.Depth = 5;
+            this.btnCheckOut.ShadowDecoration.Enabled = true;
+            this.btnCheckOut.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
+            this.btnCheckOut.Size = new System.Drawing.Size(456, 55);
             this.btnCheckOut.TabIndex = 15;
             this.btnCheckOut.Text = "Check out";
             this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
@@ -898,39 +971,48 @@
             this.colQty,
             this.colTime,
             this.colTotal});
-            this.dataGridView1.Location = new System.Drawing.Point(1013, 946);
+            this.dataGridView1.Location = new System.Drawing.Point(1275, 1163);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(811, 190);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(1081, 234);
             this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // colID
             // 
             this.colID.HeaderText = "ID";
+            this.colID.MinimumWidth = 6;
             this.colID.Name = "colID";
             this.colID.Width = 25;
             // 
             // colItem
             // 
             this.colItem.HeaderText = "Item";
+            this.colItem.MinimumWidth = 6;
             this.colItem.Name = "colItem";
             this.colItem.Width = 150;
             // 
             // colQty
             // 
             this.colQty.HeaderText = "Quantity";
+            this.colQty.MinimumWidth = 6;
             this.colQty.Name = "colQty";
             this.colQty.Width = 50;
             // 
             // colTime
             // 
             this.colTime.HeaderText = "Time";
+            this.colTime.MinimumWidth = 6;
             this.colTime.Name = "colTime";
             this.colTime.Width = 150;
             // 
             // colTotal
             // 
             this.colTotal.HeaderText = "Total";
+            this.colTotal.MinimumWidth = 6;
             this.colTotal.Name = "colTotal";
+            this.colTotal.Width = 125;
             // 
             // guna2GradientPanel5
             // 
@@ -938,38 +1020,41 @@
             this.guna2GradientPanel5.BorderColor = System.Drawing.Color.Transparent;
             this.guna2GradientPanel5.BorderRadius = 20;
             this.guna2GradientPanel5.BorderThickness = 20;
-            this.guna2GradientPanel5.Controls.Add(this.label15);
+            this.guna2GradientPanel5.Controls.Add(this.lblTotalSalesDashboard);
             this.guna2GradientPanel5.Controls.Add(this.label13);
             this.guna2GradientPanel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.guna2GradientPanel5.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.guna2GradientPanel5.Location = new System.Drawing.Point(1035, 1168);
+            this.guna2GradientPanel5.Location = new System.Drawing.Point(1281, 1445);
+            this.guna2GradientPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GradientPanel5.Name = "guna2GradientPanel5";
             this.guna2GradientPanel5.ShadowDecoration.BorderRadius = 30;
             this.guna2GradientPanel5.ShadowDecoration.Depth = 5;
             this.guna2GradientPanel5.ShadowDecoration.Enabled = true;
             this.guna2GradientPanel5.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(15);
-            this.guna2GradientPanel5.Size = new System.Drawing.Size(383, 166);
+            this.guna2GradientPanel5.Size = new System.Drawing.Size(511, 204);
             this.guna2GradientPanel5.TabIndex = 17;
             // 
-            // label15
+            // lblTotalSalesDashboard
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Location = new System.Drawing.Point(15, 54);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(136, 25);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "TOTAL SALES";
+            this.lblTotalSalesDashboard.AutoSize = true;
+            this.lblTotalSalesDashboard.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalSalesDashboard.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblTotalSalesDashboard.Location = new System.Drawing.Point(20, 66);
+            this.lblTotalSalesDashboard.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalSalesDashboard.Name = "lblTotalSalesDashboard";
+            this.lblTotalSalesDashboard.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblTotalSalesDashboard.Size = new System.Drawing.Size(0, 32);
+            this.lblTotalSalesDashboard.TabIndex = 1;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(13, 9);
+            this.label13.Location = new System.Drawing.Point(17, 11);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(136, 25);
+            this.label13.Size = new System.Drawing.Size(172, 32);
             this.label13.TabIndex = 0;
             this.label13.Text = "TOTAL SALES";
             // 
@@ -977,241 +1062,56 @@
             // 
             this.guna2GradientPanel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2GradientPanel6.BorderRadius = 20;
-            this.guna2GradientPanel6.Controls.Add(this.label16);
+            this.guna2GradientPanel6.Controls.Add(this.lblBestSellingDashboard);
             this.guna2GradientPanel6.Controls.Add(this.label14);
             this.guna2GradientPanel6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.guna2GradientPanel6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.guna2GradientPanel6.Location = new System.Drawing.Point(1493, 1168);
+            this.guna2GradientPanel6.Location = new System.Drawing.Point(1892, 1445);
+            this.guna2GradientPanel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GradientPanel6.Name = "guna2GradientPanel6";
             this.guna2GradientPanel6.ShadowDecoration.BorderRadius = 30;
             this.guna2GradientPanel6.ShadowDecoration.Depth = 5;
             this.guna2GradientPanel6.ShadowDecoration.Enabled = true;
             this.guna2GradientPanel6.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(15);
-            this.guna2GradientPanel6.Size = new System.Drawing.Size(345, 166);
+            this.guna2GradientPanel6.Size = new System.Drawing.Size(460, 204);
             this.guna2GradientPanel6.TabIndex = 18;
             // 
-            // label16
+            // lblBestSellingDashboard
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label16.Location = new System.Drawing.Point(16, 54);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(248, 25);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "BEST SELLING PRODUCTS";
+            this.lblBestSellingDashboard.AutoSize = true;
+            this.lblBestSellingDashboard.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBestSellingDashboard.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblBestSellingDashboard.Location = new System.Drawing.Point(21, 66);
+            this.lblBestSellingDashboard.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBestSellingDashboard.Name = "lblBestSellingDashboard";
+            this.lblBestSellingDashboard.Size = new System.Drawing.Size(0, 32);
+            this.lblBestSellingDashboard.TabIndex = 2;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Location = new System.Drawing.Point(16, 9);
+            this.label14.Location = new System.Drawing.Point(21, 11);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(248, 25);
+            this.label14.Size = new System.Drawing.Size(314, 32);
             this.label14.TabIndex = 1;
             this.label14.Text = "BEST SELLING PRODUCTS";
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(396, 180);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(59, 23);
-            this.label17.TabIndex = 9;
-            this.label17.Text = "60.00";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.label18.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(664, 180);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(59, 23);
-            this.label18.TabIndex = 10;
-            this.label18.Text = "75.00";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.label19.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(115, 369);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(59, 23);
-            this.label19.TabIndex = 11;
-            this.label19.Text = "75.00";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.label20.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(396, 369);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(59, 23);
-            this.label20.TabIndex = 12;
-            this.label20.Text = "75.00";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.label21.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(664, 369);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(59, 23);
-            this.label21.TabIndex = 13;
-            this.label21.Text = "85.00";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.label22.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(115, 197);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(70, 23);
-            this.label22.TabIndex = 14;
-            this.label22.Text = "130.00";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.label23.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(392, 197);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(70, 23);
-            this.label23.TabIndex = 15;
-            this.label23.Text = "130.00";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.label24.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(115, 383);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(70, 23);
-            this.label24.TabIndex = 16;
-            this.label24.Text = "130.00";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.label25.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(392, 383);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(70, 23);
-            this.label25.TabIndex = 17;
-            this.label25.Text = "130.00";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.label26.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(664, 197);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(70, 23);
-            this.label26.TabIndex = 18;
-            this.label26.Text = "130.00";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.label27.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(664, 383);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(70, 23);
-            this.label27.TabIndex = 19;
-            this.label27.Text = "130.00";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.label28.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(115, 197);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(59, 23);
-            this.label28.TabIndex = 14;
-            this.label28.Text = "75.00";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.label29.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(396, 197);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(59, 23);
-            this.label29.TabIndex = 20;
-            this.label29.Text = "75.00";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.label30.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(664, 197);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(59, 23);
-            this.label30.TabIndex = 21;
-            this.label30.Text = "75.00";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.label31.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(115, 384);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(59, 23);
-            this.label31.TabIndex = 22;
-            this.label31.Text = "75.00";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.label32.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(396, 384);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(59, 23);
-            this.label32.TabIndex = 23;
-            this.label32.Text = "75.00";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.label33.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(664, 384);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(59, 23);
-            this.label33.TabIndex = 24;
-            this.label33.Text = "75.00";
-            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.ClientSize = new System.Drawing.Size(1924, 1061);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.guna2GradientPanel6);
             this.Controls.Add(this.guna2GradientPanel5);
+            this.Controls.Add(this.TotalsPanel);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnCheckOut);
             this.Controls.Add(this.btnCancelOrder);
-            this.Controls.Add(this.TotalsPanel);
             this.Controls.Add(this.panelCurrentOrder);
             this.Controls.Add(this.guna2GradientPanel4);
             this.Controls.Add(this.guna2GradientPanel3);
@@ -1221,7 +1121,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.MaximumSize = new System.Drawing.Size(1940, 2500);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(2581, 3066);
             this.Name = "Form1";
             this.Text = "POINT OF SALE";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -1262,7 +1163,6 @@
         private Guna.UI2.WinForms.Guna2Button btnBakedMac;
         private Guna.UI2.WinForms.Guna2Button btnChkenMushroom;
         private Guna.UI2.WinForms.Guna2Button btnTuna;
-        private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Button btnCookiesCream;
         private Guna.UI2.WinForms.Guna2Button btnJavachip;
         private Guna.UI2.WinForms.Guna2Button btnDarkChocolate;
@@ -1303,31 +1203,14 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel6;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblTotalSalesDashboard;
+        private System.Windows.Forms.Label lblBestSellingDashboard;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DataGridViewTextBoxColumn colID;
         private System.Windows.Forms.DataGridViewTextBoxColumn colItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn colQty;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTotal;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
     }
 }
 

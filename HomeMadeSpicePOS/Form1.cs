@@ -191,7 +191,9 @@ namespace HomeMadeSpicePOS
             int idCounter = 1;
             string timeNow = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
-            // Add to DataGridView
+            UpdateTotalSales();
+            UpdateBestSelling();
+
             foreach (var item in cart.Values)
             {
                 dataGridView1.Rows.Add(
@@ -203,7 +205,11 @@ namespace HomeMadeSpicePOS
                 );
 
                 idCounter++;
+
+                UpdateTotalSales();
+                UpdateBestSelling();
             }
+          
 
             // Build Receipt Text
             StringBuilder receipt = new StringBuilder();
@@ -226,10 +232,8 @@ namespace HomeMadeSpicePOS
             receipt.AppendLine("--------------------------------------");
             receipt.AppendLine("     Thank you for your purchase!");
 
-            // Show Receipt
             MessageBox.Show(receipt.ToString(), "Receipt", MessageBoxButtons.OK);
 
-            // Clear cart after Checkout
             cart.Clear();
             txtCash.Clear();
             lblChange.Text = "₱0.00";
@@ -351,8 +355,60 @@ namespace HomeMadeSpicePOS
             // Refresh UI
             RefreshOrderPanel();
         }
+        private void UpdateTotalSales()
+        {
+            decimal totalSales = 0;
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[4].Value != null)
+                {
+                    string priceText = row.Cells[4].Value.ToString().Replace("₱", "");
+                    if (decimal.TryParse(priceText, out decimal value))
+                        totalSales += value;
+                }
+            }
+
+            lblTotalSalesDashboard.Text = "₱" + totalSales.ToString("0.00");
+        }
+        private void UpdateBestSelling()
+        {
+            Dictionary<string, int> productCounts = new Dictionary<string, int>();
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[1].Value != null && row.Cells[2].Value != null)
+                {
+                    string name = row.Cells[1].Value.ToString();
+                    int qty = int.Parse(row.Cells[2].Value.ToString());
+
+                    if (productCounts.ContainsKey(name))
+                        productCounts[name] += qty;
+                    else
+                        productCounts[name] = qty;
+                }
+
+            }
+
+            if (productCounts.Count > 0)
+            {
+                var best = productCounts.OrderByDescending(x => x.Value).First();
+                lblBestSellingDashboard.Text = $"{best.Key} ({best.Value} sold)";
+            }
+            else
+            {
+                lblBestSellingDashboard.Text = "No sales yet";
+            }
+        }
+
+
 
         private void label25_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
