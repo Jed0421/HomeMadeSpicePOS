@@ -352,9 +352,10 @@ namespace HomeMadeSpicePOS
             RefreshOrderPanel();
         }
 
+        private void label25_Click(object sender, EventArgs e)
+        {
 
-
-
+        }
     }
 
 }

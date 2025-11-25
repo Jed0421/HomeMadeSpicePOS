@@ -88,6 +88,23 @@
             this.guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label16 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
@@ -124,6 +141,11 @@
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientPanel1.Controls.Add(this.label21);
+            this.guna2GradientPanel1.Controls.Add(this.label20);
+            this.guna2GradientPanel1.Controls.Add(this.label19);
+            this.guna2GradientPanel1.Controls.Add(this.label18);
+            this.guna2GradientPanel1.Controls.Add(this.label17);
             this.guna2GradientPanel1.Controls.Add(this.label4);
             this.guna2GradientPanel1.Controls.Add(this.label3);
             this.guna2GradientPanel1.Controls.Add(this.btnChikenPesto);
@@ -155,11 +177,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(130, 105);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(115, 180);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(59, 23);
             this.label3.TabIndex = 7;
-            this.label3.Text = "label3";
+            this.label3.Text = "60.00";
             // 
             // btnChikenPesto
             // 
@@ -171,7 +194,7 @@
             this.btnChikenPesto.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnChikenPesto.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnChikenPesto.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnChikenPesto.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnChikenPesto.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChikenPesto.ForeColor = System.Drawing.Color.White;
             this.btnChikenPesto.Location = new System.Drawing.Point(602, 256);
             this.btnChikenPesto.Name = "btnChikenPesto";
@@ -181,7 +204,7 @@
             this.btnChikenPesto.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
             this.btnChikenPesto.Size = new System.Drawing.Size(180, 157);
             this.btnChikenPesto.TabIndex = 6;
-            this.btnChikenPesto.Text = "guna2Button6";
+            this.btnChikenPesto.Text = "Chicken Penne Pesto";
             this.btnChikenPesto.Click += new System.EventHandler(this.btnChikenPesto_Click);
             // 
             // btnCarbonaraBacon
@@ -194,7 +217,7 @@
             this.btnCarbonaraBacon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCarbonaraBacon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCarbonaraBacon.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnCarbonaraBacon.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCarbonaraBacon.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCarbonaraBacon.ForeColor = System.Drawing.Color.White;
             this.btnCarbonaraBacon.Location = new System.Drawing.Point(337, 256);
             this.btnCarbonaraBacon.Name = "btnCarbonaraBacon";
@@ -204,7 +227,7 @@
             this.btnCarbonaraBacon.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
             this.btnCarbonaraBacon.Size = new System.Drawing.Size(180, 157);
             this.btnCarbonaraBacon.TabIndex = 5;
-            this.btnCarbonaraBacon.Text = "guna2Button5";
+            this.btnCarbonaraBacon.Text = "Carbonara w/ Bacon Bits";
             this.btnCarbonaraBacon.Click += new System.EventHandler(this.btnCarbonaraBacon_Click);
             // 
             // btnSaltedEgg
@@ -217,7 +240,7 @@
             this.btnSaltedEgg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSaltedEgg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnSaltedEgg.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnSaltedEgg.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSaltedEgg.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaltedEgg.ForeColor = System.Drawing.Color.White;
             this.btnSaltedEgg.Location = new System.Drawing.Point(337, 82);
             this.btnSaltedEgg.Name = "btnSaltedEgg";
@@ -227,7 +250,7 @@
             this.btnSaltedEgg.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
             this.btnSaltedEgg.Size = new System.Drawing.Size(180, 157);
             this.btnSaltedEgg.TabIndex = 4;
-            this.btnSaltedEgg.Text = "guna2Button4";
+            this.btnSaltedEgg.Text = "Salted Egg Pasta";
             this.btnSaltedEgg.Click += new System.EventHandler(this.btnSaltedEgg_Click);
             // 
             // btnBakedMac
@@ -240,7 +263,7 @@
             this.btnBakedMac.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnBakedMac.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBakedMac.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnBakedMac.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBakedMac.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBakedMac.ForeColor = System.Drawing.Color.White;
             this.btnBakedMac.Location = new System.Drawing.Point(605, 82);
             this.btnBakedMac.Name = "btnBakedMac";
@@ -250,7 +273,7 @@
             this.btnBakedMac.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
             this.btnBakedMac.Size = new System.Drawing.Size(180, 157);
             this.btnBakedMac.TabIndex = 3;
-            this.btnBakedMac.Text = "guna2Button3";
+            this.btnBakedMac.Text = "Baked Mac";
             this.btnBakedMac.Click += new System.EventHandler(this.btnBakedMac_Click);
             // 
             // btnChkenMushroom
@@ -263,7 +286,7 @@
             this.btnChkenMushroom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnChkenMushroom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnChkenMushroom.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnChkenMushroom.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnChkenMushroom.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChkenMushroom.ForeColor = System.Drawing.Color.White;
             this.btnChkenMushroom.Location = new System.Drawing.Point(57, 256);
             this.btnChkenMushroom.Name = "btnChkenMushroom";
@@ -273,7 +296,7 @@
             this.btnChkenMushroom.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
             this.btnChkenMushroom.Size = new System.Drawing.Size(180, 157);
             this.btnChkenMushroom.TabIndex = 2;
-            this.btnChkenMushroom.Text = "guna2Button2";
+            this.btnChkenMushroom.Text = "Chicken & Mushroom Alfredo";
             this.btnChkenMushroom.Click += new System.EventHandler(this.btnChkenMushroom_Click);
             // 
             // btnTuna
@@ -286,7 +309,7 @@
             this.btnTuna.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnTuna.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnTuna.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnTuna.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnTuna.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTuna.ForeColor = System.Drawing.Color.White;
             this.btnTuna.Location = new System.Drawing.Point(60, 82);
             this.btnTuna.Name = "btnTuna";
@@ -296,10 +319,17 @@
             this.btnTuna.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
             this.btnTuna.Size = new System.Drawing.Size(180, 157);
             this.btnTuna.TabIndex = 1;
+            this.btnTuna.Text = "Tuna Pasta ";
             this.btnTuna.Click += new System.EventHandler(this.btnTuna_Click);
             // 
             // guna2GradientPanel2
             // 
+            this.guna2GradientPanel2.Controls.Add(this.label27);
+            this.guna2GradientPanel2.Controls.Add(this.label26);
+            this.guna2GradientPanel2.Controls.Add(this.label25);
+            this.guna2GradientPanel2.Controls.Add(this.label24);
+            this.guna2GradientPanel2.Controls.Add(this.label22);
+            this.guna2GradientPanel2.Controls.Add(this.label23);
             this.guna2GradientPanel2.Controls.Add(this.label5);
             this.guna2GradientPanel2.Controls.Add(this.btnCookiesCream);
             this.guna2GradientPanel2.Controls.Add(this.btnJavachip);
@@ -335,12 +365,13 @@
             this.btnCookiesCream.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCookiesCream.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCookiesCream.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnCookiesCream.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCookiesCream.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCookiesCream.ForeColor = System.Drawing.Color.White;
             this.btnCookiesCream.Location = new System.Drawing.Point(605, 280);
             this.btnCookiesCream.Name = "btnCookiesCream";
             this.btnCookiesCream.Size = new System.Drawing.Size(180, 157);
             this.btnCookiesCream.TabIndex = 7;
+            this.btnCookiesCream.Text = "Cookies n Cream";
             this.btnCookiesCream.Click += new System.EventHandler(this.btnCookiesCream_Click);
             // 
             // btnJavachip
@@ -352,12 +383,13 @@
             this.btnJavachip.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnJavachip.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnJavachip.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnJavachip.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnJavachip.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJavachip.ForeColor = System.Drawing.Color.White;
             this.btnJavachip.Location = new System.Drawing.Point(337, 98);
             this.btnJavachip.Name = "btnJavachip";
             this.btnJavachip.Size = new System.Drawing.Size(180, 157);
             this.btnJavachip.TabIndex = 6;
+            this.btnJavachip.Text = "Java Chip";
             this.btnJavachip.Click += new System.EventHandler(this.btnJavachip_Click);
             // 
             // btnDarkChocolate
@@ -369,12 +401,13 @@
             this.btnDarkChocolate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnDarkChocolate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnDarkChocolate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnDarkChocolate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDarkChocolate.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDarkChocolate.ForeColor = System.Drawing.Color.White;
             this.btnDarkChocolate.Location = new System.Drawing.Point(605, 98);
             this.btnDarkChocolate.Name = "btnDarkChocolate";
             this.btnDarkChocolate.Size = new System.Drawing.Size(180, 157);
             this.btnDarkChocolate.TabIndex = 5;
+            this.btnDarkChocolate.Text = "Dark Chocolate";
             this.btnDarkChocolate.Click += new System.EventHandler(this.btnDarkChocolate_Click);
             // 
             // btnStrawberry
@@ -386,12 +419,13 @@
             this.btnStrawberry.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnStrawberry.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnStrawberry.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnStrawberry.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnStrawberry.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStrawberry.ForeColor = System.Drawing.Color.White;
             this.btnStrawberry.Location = new System.Drawing.Point(60, 280);
             this.btnStrawberry.Name = "btnStrawberry";
             this.btnStrawberry.Size = new System.Drawing.Size(180, 157);
             this.btnStrawberry.TabIndex = 4;
+            this.btnStrawberry.Text = "Strawberry";
             this.btnStrawberry.Click += new System.EventHandler(this.btnStrawberry_Click);
             // 
             // btnCoffeeJelly
@@ -403,12 +437,13 @@
             this.btnCoffeeJelly.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCoffeeJelly.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCoffeeJelly.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnCoffeeJelly.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCoffeeJelly.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCoffeeJelly.ForeColor = System.Drawing.Color.White;
             this.btnCoffeeJelly.Location = new System.Drawing.Point(337, 280);
             this.btnCoffeeJelly.Name = "btnCoffeeJelly";
             this.btnCoffeeJelly.Size = new System.Drawing.Size(180, 157);
             this.btnCoffeeJelly.TabIndex = 3;
+            this.btnCoffeeJelly.Text = "Coffee Jelly";
             this.btnCoffeeJelly.Click += new System.EventHandler(this.btnCoffeeJelly_Click);
             // 
             // btnOreo
@@ -420,12 +455,13 @@
             this.btnOreo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnOreo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnOreo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnOreo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnOreo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOreo.ForeColor = System.Drawing.Color.White;
             this.btnOreo.Location = new System.Drawing.Point(60, 98);
             this.btnOreo.Name = "btnOreo";
             this.btnOreo.Size = new System.Drawing.Size(180, 157);
             this.btnOreo.TabIndex = 2;
+            this.btnOreo.Text = "Oreo";
             this.btnOreo.Click += new System.EventHandler(this.btnOreo_Click);
             // 
             // label2
@@ -441,6 +477,12 @@
             // 
             // guna2GradientPanel3
             // 
+            this.guna2GradientPanel3.Controls.Add(this.label33);
+            this.guna2GradientPanel3.Controls.Add(this.label32);
+            this.guna2GradientPanel3.Controls.Add(this.label31);
+            this.guna2GradientPanel3.Controls.Add(this.label28);
+            this.guna2GradientPanel3.Controls.Add(this.label29);
+            this.guna2GradientPanel3.Controls.Add(this.label30);
             this.guna2GradientPanel3.Controls.Add(this.label6);
             this.guna2GradientPanel3.Controls.Add(this.btnMocha);
             this.guna2GradientPanel3.Controls.Add(this.btnCaramel);
@@ -476,12 +518,13 @@
             this.btnMocha.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnMocha.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnMocha.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnMocha.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnMocha.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMocha.ForeColor = System.Drawing.Color.White;
             this.btnMocha.Location = new System.Drawing.Point(605, 288);
             this.btnMocha.Name = "btnMocha";
             this.btnMocha.Size = new System.Drawing.Size(180, 157);
             this.btnMocha.TabIndex = 7;
+            this.btnMocha.Text = "Mocha";
             this.btnMocha.Click += new System.EventHandler(this.btnMocha_Click);
             // 
             // btnCaramel
@@ -493,12 +536,13 @@
             this.btnCaramel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCaramel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCaramel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnCaramel.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCaramel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCaramel.ForeColor = System.Drawing.Color.White;
             this.btnCaramel.Location = new System.Drawing.Point(337, 98);
             this.btnCaramel.Name = "btnCaramel";
             this.btnCaramel.Size = new System.Drawing.Size(180, 157);
             this.btnCaramel.TabIndex = 6;
+            this.btnCaramel.Text = "Caramel";
             this.btnCaramel.Click += new System.EventHandler(this.guna2Button14_Click);
             // 
             // btnLatte
@@ -510,12 +554,13 @@
             this.btnLatte.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLatte.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLatte.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnLatte.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLatte.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLatte.ForeColor = System.Drawing.Color.White;
             this.btnLatte.Location = new System.Drawing.Point(605, 98);
             this.btnLatte.Name = "btnLatte";
             this.btnLatte.Size = new System.Drawing.Size(180, 157);
             this.btnLatte.TabIndex = 5;
+            this.btnLatte.Text = "Latte";
             this.btnLatte.Click += new System.EventHandler(this.btnLatte_Click);
             // 
             // btnMacchiato
@@ -527,12 +572,13 @@
             this.btnMacchiato.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnMacchiato.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnMacchiato.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnMacchiato.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnMacchiato.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMacchiato.ForeColor = System.Drawing.Color.White;
             this.btnMacchiato.Location = new System.Drawing.Point(60, 288);
             this.btnMacchiato.Name = "btnMacchiato";
             this.btnMacchiato.Size = new System.Drawing.Size(180, 157);
             this.btnMacchiato.TabIndex = 4;
+            this.btnMacchiato.Text = "Macchiato";
             this.btnMacchiato.Click += new System.EventHandler(this.btnMacchiato_Click);
             // 
             // btnVanila
@@ -544,12 +590,13 @@
             this.btnVanila.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnVanila.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnVanila.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnVanila.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnVanila.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVanila.ForeColor = System.Drawing.Color.White;
             this.btnVanila.Location = new System.Drawing.Point(337, 288);
             this.btnVanila.Name = "btnVanila";
             this.btnVanila.Size = new System.Drawing.Size(180, 157);
             this.btnVanila.TabIndex = 3;
+            this.btnVanila.Text = "Vanilla";
             this.btnVanila.Click += new System.EventHandler(this.btnVanila_Click);
             // 
             // btnCappucino
@@ -561,12 +608,13 @@
             this.btnCappucino.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCappucino.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCappucino.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnCappucino.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCappucino.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCappucino.ForeColor = System.Drawing.Color.White;
             this.btnCappucino.Location = new System.Drawing.Point(60, 98);
             this.btnCappucino.Name = "btnCappucino";
             this.btnCappucino.Size = new System.Drawing.Size(180, 157);
             this.btnCappucino.TabIndex = 2;
+            this.btnCappucino.Text = "Cappucino";
             this.btnCappucino.Click += new System.EventHandler(this.btnEspresso_Click);
             // 
             // guna2GradientPanel4
@@ -700,7 +748,7 @@
             this.panelCurrentOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.panelCurrentOrder.Controls.Add(this.label9);
             this.panelCurrentOrder.Controls.Add(this.label8);
-            this.panelCurrentOrder.Location = new System.Drawing.Point(1030, 243);
+            this.panelCurrentOrder.Location = new System.Drawing.Point(1013, 243);
             this.panelCurrentOrder.Name = "panelCurrentOrder";
             this.panelCurrentOrder.Size = new System.Drawing.Size(811, 300);
             this.panelCurrentOrder.TabIndex = 12;
@@ -738,7 +786,7 @@
             this.TotalsPanel.Controls.Add(this.label12);
             this.TotalsPanel.Controls.Add(this.label11);
             this.TotalsPanel.Controls.Add(this.label10);
-            this.TotalsPanel.Location = new System.Drawing.Point(1030, 590);
+            this.TotalsPanel.Location = new System.Drawing.Point(1013, 590);
             this.TotalsPanel.Name = "TotalsPanel";
             this.TotalsPanel.Size = new System.Drawing.Size(811, 252);
             this.TotalsPanel.TabIndex = 13;
@@ -815,7 +863,7 @@
             this.btnCancelOrder.FillColor = System.Drawing.Color.LightCoral;
             this.btnCancelOrder.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelOrder.ForeColor = System.Drawing.Color.White;
-            this.btnCancelOrder.Location = new System.Drawing.Point(1079, 863);
+            this.btnCancelOrder.Location = new System.Drawing.Point(1062, 863);
             this.btnCancelOrder.Name = "btnCancelOrder";
             this.btnCancelOrder.Size = new System.Drawing.Size(342, 45);
             this.btnCancelOrder.TabIndex = 14;
@@ -833,7 +881,7 @@
             this.btnCheckOut.FillColor = System.Drawing.Color.LimeGreen;
             this.btnCheckOut.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckOut.ForeColor = System.Drawing.Color.White;
-            this.btnCheckOut.Location = new System.Drawing.Point(1463, 863);
+            this.btnCheckOut.Location = new System.Drawing.Point(1446, 863);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(342, 45);
             this.btnCheckOut.TabIndex = 15;
@@ -850,7 +898,7 @@
             this.colQty,
             this.colTime,
             this.colTotal});
-            this.dataGridView1.Location = new System.Drawing.Point(1030, 946);
+            this.dataGridView1.Location = new System.Drawing.Point(1013, 946);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(811, 190);
             this.dataGridView1.TabIndex = 16;
@@ -964,6 +1012,193 @@
             this.label14.TabIndex = 1;
             this.label14.Text = "BEST SELLING PRODUCTS";
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(396, 180);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(59, 23);
+            this.label17.TabIndex = 9;
+            this.label17.Text = "60.00";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(664, 180);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(59, 23);
+            this.label18.TabIndex = 10;
+            this.label18.Text = "75.00";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(115, 369);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(59, 23);
+            this.label19.TabIndex = 11;
+            this.label19.Text = "75.00";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.label20.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(396, 369);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(59, 23);
+            this.label20.TabIndex = 12;
+            this.label20.Text = "75.00";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(664, 369);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(59, 23);
+            this.label21.TabIndex = 13;
+            this.label21.Text = "85.00";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.label22.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(115, 197);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(70, 23);
+            this.label22.TabIndex = 14;
+            this.label22.Text = "130.00";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.label23.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(392, 197);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(70, 23);
+            this.label23.TabIndex = 15;
+            this.label23.Text = "130.00";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.label24.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(115, 383);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(70, 23);
+            this.label24.TabIndex = 16;
+            this.label24.Text = "130.00";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.label25.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(392, 383);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(70, 23);
+            this.label25.TabIndex = 17;
+            this.label25.Text = "130.00";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.label26.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(664, 197);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(70, 23);
+            this.label26.TabIndex = 18;
+            this.label26.Text = "130.00";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.label27.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(664, 383);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(70, 23);
+            this.label27.TabIndex = 19;
+            this.label27.Text = "130.00";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.label28.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(115, 197);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(59, 23);
+            this.label28.TabIndex = 14;
+            this.label28.Text = "75.00";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.label29.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(396, 197);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(59, 23);
+            this.label29.TabIndex = 20;
+            this.label29.Text = "75.00";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.label30.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(664, 197);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(59, 23);
+            this.label30.TabIndex = 21;
+            this.label30.Text = "75.00";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.label31.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(115, 384);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(59, 23);
+            this.label31.TabIndex = 22;
+            this.label31.Text = "75.00";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.label32.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(396, 384);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(59, 23);
+            this.label32.TabIndex = 23;
+            this.label32.Text = "75.00";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.label33.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(664, 384);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(59, 23);
+            this.label33.TabIndex = 24;
+            this.label33.Text = "75.00";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -988,7 +1223,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MaximumSize = new System.Drawing.Size(1940, 2500);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "POINT OF SALE";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1076,6 +1311,23 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colQty;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTotal;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
     }
 }
 
