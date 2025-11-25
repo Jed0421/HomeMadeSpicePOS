@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,8 +16,9 @@ namespace HomeMadeSpicePOS
         public Form1()
         {
             InitializeComponent();
-            this.MaximumSize = new System.Drawing.Size(this.Width, 5000);
+            
         }
+     
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -41,7 +43,7 @@ namespace HomeMadeSpicePOS
 
         private void btnEspresso_Click(object sender, EventArgs e)//cappucino
         {
-            AddToCart("Cappucino", 10m);
+            AddToCart("Cappucino", 75m);
         }
         private void AddToCart(string name, decimal price)
         {
@@ -123,7 +125,24 @@ namespace HomeMadeSpicePOS
 
                 y += 45;
             }
+            UpdateTotalsPanel();
         }
+        private void UpdateTotalsPanel()
+        {
+            decimal total = CalculateTotal();
+            lblTotal.Text = "₱" + total.ToString("0.00");
+
+            if (decimal.TryParse(txtCash.Text, out decimal cash))
+            {
+                decimal change = cash - total;
+                lblChange.Text = "₱" + change.ToString("0.00");
+            }
+            else
+            {
+                lblChange.Text = "₱0.00";
+            }
+        }
+
         private void BtnPlus_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
@@ -144,11 +163,197 @@ namespace HomeMadeSpicePOS
 
             RefreshOrderPanel();
         }
+        private decimal CalculateTotal()
+        {
+            return cart.Values.Sum(item => item.Total);
+        }
+
 
         private void guna2Button14_Click(object sender, EventArgs e)//Caramel
         {
-            AddToCart("Caramel", 20m);
+            AddToCart("Caramel", 75m);
         }
+
+        private void txtCash_TextChanged(object sender, EventArgs e)
+        {
+           UpdateTotalsPanel();
+        }
+
+        private void btnCheckOut_Click(object sender, EventArgs e)
+        {
+
+            if (cart.Count == 0)
+            {
+                MessageBox.Show("Your cart is empty!", "Warning");
+                return;
+            }
+
+            int idCounter = 1;
+            string timeNow = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+            // Add to DataGridView
+            foreach (var item in cart.Values)
+            {
+                dataGridView1.Rows.Add(
+                    idCounter,
+                    item.Name,
+                    item.Qty,
+                    timeNow,
+                    "₱" + item.Total.ToString("0.00")
+                );
+
+                idCounter++;
+            }
+
+            // Build Receipt Text
+            StringBuilder receipt = new StringBuilder();
+            receipt.AppendLine("        HOME MADE SPICE");
+            receipt.AppendLine("--------------------------------------");
+            receipt.AppendLine("Item               Qty        Total");
+            receipt.AppendLine("--------------------------------------");
+
+            foreach (var item in cart.Values)
+            {
+                receipt.AppendLine(
+                    $"{item.Name.PadRight(15)} {item.Qty.ToString().PadRight(5)} ₱{item.Total.ToString("0.00")}"
+                );
+            }
+
+            receipt.AppendLine("--------------------------------------");
+            receipt.AppendLine($"TOTAL:                    {lblTotal.Text}");
+            receipt.AppendLine($"CASH:                     ₱{txtCash.Text}");
+            receipt.AppendLine($"CHANGE:                   {lblChange.Text}");
+            receipt.AppendLine("--------------------------------------");
+            receipt.AppendLine("     Thank you for your purchase!");
+
+            // Show Receipt
+            MessageBox.Show(receipt.ToString(), "Receipt", MessageBoxButtons.OK);
+
+            // Clear cart after Checkout
+            cart.Clear();
+            txtCash.Clear();
+            lblChange.Text = "₱0.00";
+            RefreshOrderPanel();
+
+
+
+        }
+
+        private void btnTuna_Click(object sender, EventArgs e)
+        {
+            AddToCart("Tuna Pasta", 60m);
+        }
+
+        private void btnSaltedEgg_Click(object sender, EventArgs e)
+        {
+            AddToCart("Salted Egg Pasta", 60m);
+        }
+
+        private void btnBakedMac_Click(object sender, EventArgs e)
+        {
+            AddToCart("Baked Mac", 75m);
+        }
+
+        private void btnChkenMushroom_Click(object sender, EventArgs e)
+        {
+            AddToCart("Chicken and Mushroom Alfredo", 75m);
+        }
+
+        private void btnCarbonaraBacon_Click(object sender, EventArgs e)
+        {
+            AddToCart("Carbonara with Bacon bits", 75m);
+        }
+
+        private void btnChikenPesto_Click(object sender, EventArgs e)
+        {
+            AddToCart("Chicken Penne Pesto", 85m);
+        }
+
+        private void btnOreo_Click(object sender, EventArgs e)
+        {
+            AddToCart("Oreo", 130m);
+        }
+
+        private void btnJavachip_Click(object sender, EventArgs e)
+        {
+            AddToCart("Java Chip", 130m);
+        }
+
+        private void btnDarkChocolate_Click(object sender, EventArgs e)
+        {
+            AddToCart("Dark Chocolate", 130m);
+        }
+
+        private void btnStrawberry_Click(object sender, EventArgs e)
+        {
+            AddToCart("Strawberry", 130m);
+        }
+
+        private void btnCoffeeJelly_Click(object sender, EventArgs e)
+        {
+            AddToCart("Coffee Jelly", 130m);
+        }
+
+        private void btnCookiesCream_Click(object sender, EventArgs e)
+        {
+            AddToCart("Cookies & Cream", 145m);
+        }
+
+        private void btnLatte_Click(object sender, EventArgs e)
+        {
+            AddToCart("Latte", 75m);
+        }
+
+        private void btnMacchiato_Click(object sender, EventArgs e)
+        {
+            AddToCart("Macchiato", 75m);
+        }
+
+        private void btnVanila_Click(object sender, EventArgs e)
+        {
+            AddToCart("Vanilla", 75m);
+        }
+
+        private void btnMocha_Click(object sender, EventArgs e)
+        {
+            AddToCart("Mocha", 75m);
+        }
+
+        private void btnCancelOrder_Click(object sender, EventArgs e)
+        {
+            // Ask first (optional)
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to cancel the entire order?",
+                "Cancel Order",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.No)
+                return;
+
+            // Clear the cart dictionary
+            cart.Clear();
+
+            // Clear the order panel UI
+            panelCurrentOrder.Controls.Clear();
+
+            // Reset payment fields
+            lblTotal.Text = "₱0.00";
+            lblChange.Text = "₱0.00";
+            txtCash.Text = "";
+
+            // OPTIONAL: clear the DataGridView (uncomment if you want)
+            // dataGridView1.Rows.Clear();
+
+            MessageBox.Show("Order has been cancelled.", "Order Reset");
+
+            // Refresh UI
+            RefreshOrderPanel();
+        }
+
+
+
 
     }
 
