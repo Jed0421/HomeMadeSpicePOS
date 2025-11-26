@@ -1,0 +1,17 @@
+using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+{
+    conn.Open();
+
+    string query = @"
+        CREATE TABLE IF NOT EXISTS Sales (
+            ID INTEGER PRIMARY KEY AUTOINCREMENT,
+            Item TEXT,
+            Quantity INTEGER,
+            Total DECIMAL(10,2),
+            Time TEXT
+        );
+    ";
+
+    SQLiteCommand cmd = new SQLiteCommand(query, conn);
+    cmd.ExecuteNonQuery();
+}
