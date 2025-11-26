@@ -19,12 +19,16 @@ namespace HomeMadeSpicePOS
         public Form1()
         {
             InitializeComponent();
-            InitializeDatabase();
+            InitializeDatabase();    
             
             LoadSalesHistory();
             LoadTotalSales();
             LoadBestSellingItems();
             LoadSalesHistoryFromDatabase();
+       
+
+
+
 
         }
         void LoadSalesHistoryFromDatabase()
@@ -399,21 +403,24 @@ namespace HomeMadeSpicePOS
 
                 // Receipt
                 StringBuilder receipt = new StringBuilder();
-                receipt.AppendLine("        HOME MADE SPICE");
-                receipt.AppendLine("      ---------------------");
+                receipt.AppendLine("*************************************************");
+                receipt.AppendLine("************** HOME MADE SPICE **************");
+                receipt.AppendLine("*************************************************");
+                receipt.AppendLine(" ");
 
                 foreach (var item in cart.Values)
                     receipt.AppendLine($"{item.Name}\t{item.Qty}\t₱{item.Price:0.00}\t₱{item.Total:0.00}");
 
                 decimal change = cashPaid - total;
 
-                receipt.AppendLine("-------------------------------");
+                receipt.AppendLine("*************************************************");
                 receipt.AppendLine($"Total:\t\t₱{total:0.00}");
                 receipt.AppendLine($"Cash:\t\t₱{cashPaid:0.00}");
                 receipt.AppendLine($"Change:\t\t₱{change:0.00}");
-                receipt.AppendLine("-------------------------------");
-                receipt.AppendLine("       THANK YOU!");
-                receipt.AppendLine("-------------------------------");
+                receipt.AppendLine("*************************************************");
+                receipt.AppendLine("***************** THANK YOU! ******************");
+                receipt.AppendLine("*************************************************");
+                receipt.AppendLine("");
 
                 MessageBox.Show(receipt.ToString(), "Receipt");
 
@@ -693,6 +700,14 @@ namespace HomeMadeSpicePOS
         {
 
         }
+
+        private void txtSearchBar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+
     }
 
 }
