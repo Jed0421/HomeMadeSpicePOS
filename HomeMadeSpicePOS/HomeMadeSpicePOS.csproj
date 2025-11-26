@@ -136,7 +136,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HMS.ico" />
-    <None Include="Resources\magnifying1.png" />
     <None Include="Resources\magnifying.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
