@@ -77,6 +77,7 @@
             this.dataGridViewSalesHistory = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnViewTransactions = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
@@ -695,6 +696,7 @@
             this.TotalsPanel.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
             this.TotalsPanel.Size = new System.Drawing.Size(830, 252);
             this.TotalsPanel.TabIndex = 13;
+            this.TotalsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.TotalsPanel_Paint);
             // 
             // txtCash
             // 
@@ -708,7 +710,7 @@
             this.txtCash.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCash.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCash.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCash.Location = new System.Drawing.Point(116, 102);
+            this.txtCash.Location = new System.Drawing.Point(138, 108);
             this.txtCash.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCash.Name = "txtCash";
             this.txtCash.PlaceholderText = "";
@@ -720,54 +722,54 @@
             // lblChange
             // 
             this.lblChange.AutoSize = true;
-            this.lblChange.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChange.Font = new System.Drawing.Font("Segoe UI Black", 26.25F, System.Drawing.FontStyle.Bold);
             this.lblChange.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblChange.Location = new System.Drawing.Point(267, 196);
+            this.lblChange.Location = new System.Drawing.Point(242, 180);
             this.lblChange.Name = "lblChange";
-            this.lblChange.Size = new System.Drawing.Size(0, 37);
+            this.lblChange.Size = new System.Drawing.Size(0, 47);
             this.lblChange.TabIndex = 5;
             this.lblChange.Click += new System.EventHandler(this.lblChange_Click);
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Font = new System.Drawing.Font("Segoe UI Black", 26.25F, System.Drawing.FontStyle.Bold);
             this.lblTotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTotal.Location = new System.Drawing.Point(146, 37);
+            this.lblTotal.Location = new System.Drawing.Point(138, 38);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(0, 37);
+            this.lblTotal.Size = new System.Drawing.Size(0, 47);
             this.lblTotal.TabIndex = 3;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Segoe UI Black", 26.25F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label12.Location = new System.Drawing.Point(148, 195);
+            this.label12.Location = new System.Drawing.Point(77, 178);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(127, 37);
+            this.label12.Size = new System.Drawing.Size(169, 47);
             this.label12.TabIndex = 2;
             this.label12.Text = "Change :";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Segoe UI Black", 26.25F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label11.Location = new System.Drawing.Point(21, 106);
+            this.label11.Location = new System.Drawing.Point(13, 106);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(90, 37);
+            this.label11.Size = new System.Drawing.Size(122, 47);
             this.label11.TabIndex = 1;
             this.label11.Text = "Cash :";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Segoe UI Black", 26.25F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label10.Location = new System.Drawing.Point(21, 37);
+            this.label10.Location = new System.Drawing.Point(13, 37);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(90, 37);
+            this.label10.Size = new System.Drawing.Size(131, 47);
             this.label10.TabIndex = 0;
             this.label10.Text = "Total :";
             // 
@@ -826,7 +828,7 @@
             this.guna2GradientPanel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.guna2GradientPanel5.FillColor2 = System.Drawing.Color.Chocolate;
             this.guna2GradientPanel5.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2GradientPanel5.Location = new System.Drawing.Point(980, 1298);
+            this.guna2GradientPanel5.Location = new System.Drawing.Point(980, 1305);
             this.guna2GradientPanel5.Name = "guna2GradientPanel5";
             this.guna2GradientPanel5.ShadowDecoration.BorderRadius = 30;
             this.guna2GradientPanel5.ShadowDecoration.Depth = 5;
@@ -867,7 +869,7 @@
             this.guna2GradientPanel6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.guna2GradientPanel6.FillColor2 = System.Drawing.Color.Chocolate;
             this.guna2GradientPanel6.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2GradientPanel6.Location = new System.Drawing.Point(1248, 1298);
+            this.guna2GradientPanel6.Location = new System.Drawing.Point(1248, 1305);
             this.guna2GradientPanel6.Name = "guna2GradientPanel6";
             this.guna2GradientPanel6.ShadowDecoration.BorderRadius = 30;
             this.guna2GradientPanel6.ShadowDecoration.Depth = 5;
@@ -911,18 +913,18 @@
             this.btnResetDB.ForeColor = System.Drawing.Color.White;
             this.btnResetDB.Location = new System.Drawing.Point(980, 1256);
             this.btnResetDB.Name = "btnResetDB";
-            this.btnResetDB.Size = new System.Drawing.Size(169, 30);
+            this.btnResetDB.Size = new System.Drawing.Size(105, 39);
             this.btnResetDB.TabIndex = 19;
-            this.btnResetDB.Text = "Reset Database";
+            this.btnResetDB.Text = "Reset";
             this.btnResetDB.Click += new System.EventHandler(this.btnResetDB_Click);
             // 
             // dataGridViewSalesHistory
             // 
             this.dataGridViewSalesHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewSalesHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSalesHistory.Location = new System.Drawing.Point(980, 1085);
+            this.dataGridViewSalesHistory.Location = new System.Drawing.Point(980, 986);
             this.dataGridViewSalesHistory.Name = "dataGridViewSalesHistory";
-            this.dataGridViewSalesHistory.Size = new System.Drawing.Size(824, 163);
+            this.dataGridViewSalesHistory.Size = new System.Drawing.Size(824, 257);
             this.dataGridViewSalesHistory.TabIndex = 20;
             this.dataGridViewSalesHistory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSalesHistory_CellContentClick);
             // 
@@ -931,7 +933,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Black", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(973, 1038);
+            this.label3.Location = new System.Drawing.Point(973, 939);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(290, 47);
             this.label3.TabIndex = 8;
@@ -947,6 +949,23 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // btnViewTransactions
+            // 
+            this.btnViewTransactions.BorderRadius = 10;
+            this.btnViewTransactions.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewTransactions.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewTransactions.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnViewTransactions.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnViewTransactions.FillColor = System.Drawing.Color.DimGray;
+            this.btnViewTransactions.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewTransactions.ForeColor = System.Drawing.Color.White;
+            this.btnViewTransactions.Location = new System.Drawing.Point(1091, 1256);
+            this.btnViewTransactions.Name = "btnViewTransactions";
+            this.btnViewTransactions.Size = new System.Drawing.Size(207, 39);
+            this.btnViewTransactions.TabIndex = 21;
+            this.btnViewTransactions.Text = "View Transaction";
+            this.btnViewTransactions.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -955,6 +974,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(1443, 856);
+            this.Controls.Add(this.btnViewTransactions);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridViewSalesHistory);
             this.Controls.Add(this.btnResetDB);
@@ -1048,6 +1068,7 @@
         private Guna.UI2.WinForms.Guna2Button btnResetDB;
         private System.Windows.Forms.DataGridView dataGridViewSalesHistory;
         private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2Button btnViewTransactions;
     }
 }
 

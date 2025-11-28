@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HomeMadeSpicePOS
@@ -16,22 +13,30 @@ namespace HomeMadeSpicePOS
     {
         string connectionString = "Data Source=pos.db;Version=3;";
 
+
+        private TransactionHistory viewTransUC;
+        private bool isViewTransOpen = false;
+
+
+
+
         public Form1()
         {
             InitializeComponent();
             InitializeDatabase();    
             
-            LoadSalesHistory();
+
             LoadTotalSales();
             LoadBestSellingItems();
             LoadSalesHistoryFromDatabase();
-       
+
         }
         void LoadSalesHistoryFromDatabase()
         {
             using (SQLiteConnection conn = new SQLiteConnection(connectionString))
             {
                 conn.Open();
+                string query = "SELECT * FROM Sales ORDER BY Time DESC";
 
                 SQLiteDataAdapter da = new SQLiteDataAdapter(query, conn);
                 DataTable dt = new DataTable();
@@ -44,56 +49,85 @@ namespace HomeMadeSpicePOS
 
         private void LoadBestSellingItems()
         {
-            var itemTotals = new Dictionary<string, int>();
+            StringBuilder sb = new StringBuilder();
 
             using (SQLiteConnection conn = new SQLiteConnection(connectionString))
             {
                 conn.Open();
 
-                string query = "SELECT Items FROM Sales";
-                SQLiteCommand cmd = new SQLiteCommand(query, conn);
-                SQLiteDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
+                // 1) If there are pinned persisted best sellers, show them
+                string pinnedQuery = "SELECT Name, TotalSold FROM BestSelling WHERE IsPinned = 1 ORDER BY TotalSold DESC LIMIT 3;";
+                using (var cmdPinned = new SQLiteCommand(pinnedQuery, conn))
+                using (var readerPinned = cmdPinned.ExecuteReader())
                 {
-                    string itemsText = reader["Items"].ToString();
-
-                    // Example: "Carbonara x2, Baked Mac x1, Tuna Pasta x1"
-                    var items = itemsText.Split(',');
-
-                    foreach (var entry in items)
+                    int rank = 1;
+                    bool foundPinned = false;
+                    while (readerPinned.Read())
                     {
-                        var parts = entry.Trim().Split('x');
+                        foundPinned = true;
+                        string name = readerPinned["Name"].ToString();
+                        int total = Convert.ToInt32(readerPinned["TotalSold"]);
+                        sb.AppendLine($"{rank}. {name} ({total} sold)");
+                        rank++;
+                    }
 
-                        if (parts.Length == 2)
+                    if (foundPinned)
+                    {
+                        lblBestSellingDashboard.Text = sb.ToString();
+                        return; // pinned list shown; do not compute from logs
+                    }
+                }
+
+                // 2) No pinned entries — compute from Sales (existing method)
+                var itemTotals = new Dictionary<string, int>();
+                string query = "SELECT Items FROM Sales";
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                using (SQLiteDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string itemsText = reader["Items"].ToString();
+                        var items = itemsText.Split(',');
+                        foreach (var entry in items)
                         {
-                            string name = parts[0].Trim();
-                            int qty = int.Parse(parts[1].Trim());
-
-                            if (!itemTotals.ContainsKey(name))
-                                itemTotals[name] = 0;
-
-                            itemTotals[name] += qty;
+                            var parts = entry.Trim().Split('x');
+                            if (parts.Length == 2)
+                            {
+                                string name = parts[0].Trim();
+                                if (!int.TryParse(parts[1].Trim(), out int qty)) continue;
+                                if (!itemTotals.ContainsKey(name)) itemTotals[name] = 0;
+                                itemTotals[name] += qty;
+                            }
                         }
                     }
                 }
+
+                // Combine with persisted totals optionally (if you want total = logs + persisted)
+                // If you want to include persisted totals too, uncomment this block:
+                
+                using (var cmdPersist = new SQLiteCommand("SELECT Name, TotalSold FROM BestSelling", conn))
+                using (var rdr = cmdPersist.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                        string name = rdr["Name"].ToString();
+                        int t = Convert.ToInt32(rdr["TotalSold"]);
+                        if (!itemTotals.ContainsKey(name)) itemTotals[name] = 0;
+                        itemTotals[name] += t;
+                    }
+                }
+                
+
+                var bestThree = itemTotals.OrderByDescending(i => i.Value).Take(3);
+                int rank2 = 1;
+                foreach (var item in bestThree)
+                {
+                    sb.AppendLine($"{rank2}. {item.Key} ({item.Value} sold)");
+                    rank2++;
+                }
+
+                lblBestSellingDashboard.Text = sb.ToString();
             }
-
-            // Sort descending & take top 3
-            var bestThree = itemTotals
-                .OrderByDescending(i => i.Value)
-                .Take(3);
-
-            StringBuilder sb = new StringBuilder();
-            int rank = 1;
-
-            foreach (var item in bestThree)
-            {
-                sb.AppendLine($"{rank}. {item.Key} ({item.Value} sold)");
-                rank++;
-            }
-
-            lblBestSellingDashboard.Text = sb.ToString();
         }
 
         private void LoadTotalSales()
@@ -102,8 +136,7 @@ namespace HomeMadeSpicePOS
             {
                 conn.Open();
 
-                // Changed from Sales to SalesArchive
-                string query = "SELECT SUM(Total) FROM SalesArchive";
+                string query = "SELECT TotalRevenue FROM TotalSales WHERE ID = 1";
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
 
                 object result = cmd.ExecuteScalar();
@@ -119,12 +152,36 @@ namespace HomeMadeSpicePOS
                 conn.Open();
 
                 string query = @"
-            CREATE TABLE IF NOT EXISTS Sales (
-                ID INTEGER PRIMARY KEY AUTOINCREMENT,
-                Items TEXT NOT NULL,
-                Total DECIMAL(10,2) NOT NULL,
-                Time TEXT NOT NULL
-            );
+        CREATE TABLE IF NOT EXISTS Sales (
+            ID INTEGER PRIMARY KEY AUTOINCREMENT,
+            Items TEXT NOT NULL,
+            Total DECIMAL(10,2) NOT NULL,
+            Time TEXT NOT NULL
+        );
+
+        CREATE TABLE IF NOT EXISTS SalesArchive (
+            ID INTEGER PRIMARY KEY AUTOINCREMENT,
+            Items TEXT NOT NULL,
+            Total DECIMAL(10,2) NOT NULL,
+            Time TEXT NOT NULL
+        );
+
+        -- BestSelling keeps persistent totals and optionally pins specific items
+        CREATE TABLE IF NOT EXISTS BestSelling (
+            ID INTEGER PRIMARY KEY AUTOINCREMENT,
+            Name TEXT NOT NULL UNIQUE,
+            TotalSold INTEGER NOT NULL DEFAULT 0,
+            IsPinned INTEGER NOT NULL DEFAULT 0 -- 0 = false, 1 = true
+        );
+        CREATE TABLE IF NOT EXISTS TotalSales (
+            ID INTEGER PRIMARY KEY CHECK (ID = 1),
+            TotalRevenue DECIMAL(10,2) NOT NULL DEFAULT 0
+        );
+
+        -- Ensure it always has exactly 1 row
+            INSERT OR IGNORE INTO TotalSales (ID, TotalRevenue) VALUES (1, 0);
+
+
         ";
 
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
@@ -358,22 +415,65 @@ namespace HomeMadeSpicePOS
                     cart.Values.Select(i => $"{i.Name} x{i.Qty}")
                 );
 
+
+
                 // --- SAVE ONE ROW ONLY ---
                 using (SQLiteConnection conn = new SQLiteConnection(connectionString))
                 {
                     conn.Open();
 
-                    string query = @"
-                INSERT INTO Sales (Items, Total, Time)
-                VALUES (@items, @total, @time);
-            ";
+                    string backupQuery = @"
+                    INSERT INTO SalesArchive (Items, Total, Time)
+                    VALUES (@items, @total, @time);
+                    ";
+                    SQLiteCommand backupCmd = new SQLiteCommand(backupQuery, conn);
+                    backupCmd.Parameters.AddWithValue("@items", itemsSummary);
+                    backupCmd.Parameters.AddWithValue("@total", total);
+                    backupCmd.Parameters.AddWithValue("@time", transactionTime);
+                    backupCmd.ExecuteNonQuery();
 
-                    SQLiteCommand cmd = new SQLiteCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@items", itemsSummary);
-                    cmd.Parameters.AddWithValue("@total", total);
-                    cmd.Parameters.AddWithValue("@time", transactionTime);
-                    cmd.ExecuteNonQuery();
+                    string insertSales = @"
+                    INSERT INTO Sales (Items, Total, Time)
+                    VALUES (@items, @total, @time);
+                    ";
+                    SQLiteCommand cmd1 = new SQLiteCommand(insertSales, conn);
+                    cmd1.Parameters.AddWithValue("@items", itemsSummary);
+                    cmd1.Parameters.AddWithValue("@total", total);
+                    cmd1.Parameters.AddWithValue("@time", transactionTime);
+                    cmd1.ExecuteNonQuery();
+
+
+                    using (var cmd = new SQLiteCommand("UPDATE TotalSales SET TotalRevenue = TotalRevenue + @add;", conn))
+                    {
+                        cmd.Parameters.AddWithValue("@add", total);
+                        cmd.ExecuteNonQuery();
+                    }
+
+
+                    foreach (var item in cart.Values)
+                    {
+                        // Use a transaction to be safe
+                        using (var updateCmd = new SQLiteCommand(conn))
+                        {
+                            // Insert if missing; if exists, update by adding quantity.
+                            updateCmd.CommandText = @"
+                            INSERT INTO BestSelling (Name, TotalSold)
+                            VALUES (@name, @qty)
+                            ON CONFLICT(Name) DO UPDATE SET TotalSold = TotalSold + @qty;
+                            ";
+                            updateCmd.Parameters.AddWithValue("@name", item.Name);
+                            updateCmd.Parameters.AddWithValue("@qty", item.Qty);
+                            updateCmd.ExecuteNonQuery();
+                        }
+                    }
+
+
+
                 }
+
+
+
+
 
                 // Refresh dashboard
                 LoadSalesHistoryFromDatabase();
@@ -418,7 +518,7 @@ namespace HomeMadeSpicePOS
 
 
 
-
+        
 
         private List<SaleLineItem> rawSalesLog = new List<SaleLineItem>();
 
@@ -644,37 +744,57 @@ namespace HomeMadeSpicePOS
 
         private void btnResetDB_Click(object sender, EventArgs e)
         {
+            // Confirmation message before resetting
             DialogResult result = MessageBox.Show(
-        "Are you sure you want to delete the entire Sales table? This cannot be undone.",
-        "Confirm Reset",
-        MessageBoxButtons.YesNo,
-        MessageBoxIcon.Warning
-    );
+                "Are you sure you want to reset the Sales table?\nThis action cannot be undone.",
+                "Confirm Reset",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
 
-            if (result == DialogResult.Yes)
+            // If user clicks NO → cancel reset
+            if (result == DialogResult.No)
             {
-                using (var conn = new SQLiteConnection(connectionString))
+                return;
+            }
+
+            // If user clicks YES → continue resetting
+            try
+            {
+                using (SQLiteConnection conn = new SQLiteConnection(connectionString))
                 {
                     conn.Open();
 
-                    string query = "DROP TABLE IF EXISTS Sales";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conn);
-                    cmd.ExecuteNonQuery();
+                    string query = "DELETE FROM Sales; DELETE FROM sqlite_sequence WHERE name='Sales';";
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
                 }
 
-                // IMPORTANT: Recreate the new format table
-                InitializeDatabase();
+                // Clear the DataGridView safely
+                if (dataGridViewSalesHistory != null)
+                {
+                    dataGridViewSalesHistory.DataSource = null;
+                    dataGridViewSalesHistory.Rows.Clear();
+                }
 
-                // Reload empty table
-                LoadSalesHistoryFromDatabase();
+                if (lblTotal != null)
+                    lblTotal.Text = "₱0.00";
+
                 LoadTotalSales();
-                LoadBestSellingItems();
 
-                MessageBox.Show("Sales table has been reset and recreated.");
+                MessageBox.Show("Sales table has been reset successfully.",
+                    "Reset Successful",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error during reset:\n" + ex.Message);
             }
         }
-
-
+ 
         private void dataGridViewSalesHistory_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -685,8 +805,57 @@ namespace HomeMadeSpicePOS
 
         }
 
+        private void guna2Button1_Click(object sender, EventArgs e)//btnViewTransactions
+        {
+            if (!isViewTransOpen)
+            {
+                viewTransUC = new TransactionHistory();
+                viewTransUC.LoadAllTransactions();
+                viewTransUC.Size = new Size(1205, 865); // Set the popup size
 
+                // Center on Form1
+                viewTransUC.Location = new Point(
+                    (this.ClientSize.Width - viewTransUC.Width) / 2,
+                    (this.ClientSize.Height - viewTransUC.Height) / 2
+                );
 
+                this.Controls.Add(viewTransUC);
+                viewTransUC.BringToFront();
+
+                // Attach dragging events
+                viewTransUC.MouseDown += viewTransUC.UC_ViewTransaction_MouseDown;
+                viewTransUC.MouseMove += viewTransUC.UC_ViewTransaction_MouseMove;
+                viewTransUC.MouseUp += viewTransUC.UC_ViewTransaction_MouseUp;
+
+                isViewTransOpen = true;
+            }
+            else
+            {
+                CloseTransactionHistory();
+            }
+
+        }
+        private void ViewTransUC_CloseRequested(object sender, EventArgs e)
+        {
+            CloseTransactionHistory();
+        }
+
+        private void CloseTransactionHistory()
+        {
+   
+            if (viewTransUC != null)
+            {
+                this.Controls.Remove(viewTransUC);
+                viewTransUC.Dispose();
+                viewTransUC = null;
+            }
+            isViewTransOpen = false;
+        }
+
+        private void TotalsPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 }

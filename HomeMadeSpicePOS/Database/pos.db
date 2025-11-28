@@ -1,4 +1,0 @@
-
-    SQLiteCommand cmd = new SQLiteCommand(query, conn);
-    cmd.ExecuteNonQuery();
-}
