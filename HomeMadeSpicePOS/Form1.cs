@@ -26,17 +26,12 @@ namespace HomeMadeSpicePOS
             LoadBestSellingItems();
             LoadSalesHistoryFromDatabase();
        
-
-
-
-
         }
         void LoadSalesHistoryFromDatabase()
         {
             using (SQLiteConnection conn = new SQLiteConnection(connectionString))
             {
                 conn.Open();
-                string query = "SELECT * FROM Sales ORDER BY Time DESC";
 
                 SQLiteDataAdapter da = new SQLiteDataAdapter(query, conn);
                 DataTable dt = new DataTable();
@@ -103,13 +98,12 @@ namespace HomeMadeSpicePOS
 
         private void LoadTotalSales()
         {
-            string connectionString = "Data Source=pos.db;Version=3;";
-
             using (SQLiteConnection conn = new SQLiteConnection(connectionString))
             {
                 conn.Open();
 
-                string query = "SELECT SUM(Total) FROM Sales";
+                // Changed from Sales to SalesArchive
+                string query = "SELECT SUM(Total) FROM SalesArchive";
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
 
                 object result = cmd.ExecuteScalar();
@@ -135,21 +129,6 @@ namespace HomeMadeSpicePOS
 
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 cmd.ExecuteNonQuery();
-            }
-        }
-
-        private void LoadSalesHistory()
-        {
-            using (SQLiteConnection conn = new SQLiteConnection(connectionString))
-            {
-                conn.Open();
-
-                string query = "SELECT * FROM Sales ORDER BY ID DESC";
-                SQLiteDataAdapter da = new SQLiteDataAdapter(query, conn);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                dataGridViewSalesHistory.DataSource = dt;
             }
         }
 
@@ -439,7 +418,7 @@ namespace HomeMadeSpicePOS
 
 
 
-        private int transactionIdCounter = 0;
+
 
         private List<SaleLineItem> rawSalesLog = new List<SaleLineItem>();
 
